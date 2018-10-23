@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Slow Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/joAudio.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="module/joApp.js"></script>
+    <script src="module/joController.js"></script>
+    <script src="module/joDirective.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="module/joRouter.js"></script>
+    <script src="module/joService.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/joLayoutInit.css"/>
+    <link rel="stylesheet" href="css/playLayout!!!.css"/>
+    <link rel="stylesheet" href="css/joRespLayout.css"/>
+    <link rel="stylesheet" href="css/joAnimate.css"/>
+<style>
+
+
+
+</style>
+</head>
+<body ng-app="joApp" ng-controller="playController" >
+
+    <div class="wrap">
+        <span class="glyphicon glyphicon-music tipFlag"></span>
+        <div class="jo-dialog-wrap" >
+            <div class="jo-dialog-window">
+                <div class="jo-dialog-top">
+                    <h4>发表歌曲评论
+                        <button class="jo-btn-close btn-hide pull-right"
+                                ng-click="commentDialogHide()">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button></h4>
+                </div>
+                <div class="jo-dialog-content">
+                    <textarea placeholder="说说你的想法.."></textarea>
+                </div>
+                <div class="jo-dialog-bottom">
+                    <button class="btn-hide pull-right">评论</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 这是header-->
+        <header></header>
+
+        <!-- 这是content-->
+        <div class="content container" >
+            <img ng-src="{{source.songList[source.playIndex].albumCoverUrl}}" class="play-bg">
+            <div class="row">
+                <!-- 这是content left-->
+                <content-left></content-left>
+                <!-- 这是content right-->
+                <content-right></content-right>
+            </div>
+        </div>
+        <!-- 这是comment-->
+        <comment></comment>
+        <!-- 这是play bar-->
+        <play-bar></play-bar>
+        <!-- 这是play home-->
+        <play-home></play-home>
+        <play-home-footer></play-home-footer>
+
+    </div>
+<!--配合JQ用来判断当前屏幕的尺寸类型-->
+    <b class="visible-lg lgFlag"></b>
+    <b class="visible-md mdFlag"></b>
+    <b class="visible-sm smFlag"></b>
+    <b class="visible-xs xsFlag"></b>
+</body>
+</html>

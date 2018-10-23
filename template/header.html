@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="row hidden-md hidden-lg"  ng-hide="!contentOpenFlag">
+        <div class="col-xs-1 col-sm-1 col-xs-offset-1 col-xs-offset-1"></div>
+        <div class="col-xs-8 col-sm-8 ">
+            <h4 class='col-xs-12 col-sm-12 text-over-point' ng-bind="source.songList[source.playIndex].songName"></h4>
+            <h5 ng-bind="source.songList[source.playIndex].singerName"></h5>
+        </div>
+        <div class="col-xs-1 col-sm-1 ">
+            <button class="btn-reduce btn-hide" ng-click="reduce()"><span class="glyphicon glyphicon-resize-small"></span></button>
+        </div>
+    </div>
+    <!-- home-play标题-->
+    <div class="row hidden-xs play-home-tittle" ng-show="lgFlag||mdFlag||(smFlag&&!contentOpenFlag)" >
+        <div class="col-md-3 col-lg-3 col-xs-3 header-logo">
+            <img src="data/image/logo.png"/>
+            <b>Slow Music</b>
+        </div>
+        <div class="col-md-4 col-lg-4 col-xs-4 header-search">
+            <input type="text" ><span class="glyphicon glyphicon-search"></span>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xs-3  header-user">
+            <button class="btn-user btn-hide">
+                你点我啊
+            </button>
+            <user-page></user-page>
+        </div>
+    </div>
+</div>

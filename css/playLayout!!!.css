@@ -1,0 +1,1000 @@
+
+/*设置网页主题部分样式*/
+html,body,.wrap{
+    width: 100%;
+    height: 100%;
+    font-family: '微软雅黑', sans-serif;
+    overflow: hidden;
+}
+.wrap{
+    height: 200%;
+    position: absolute;
+}
+/*******************头部********************/
+.header,.play-bar,.play-home-header,.play-home-footer{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    background: rgba(33,33,36,0.8);
+}
+
+.play-home-header,.play-home-footer{
+    z-index: 998;
+}
+.header,.play-home-header{
+    top:0;
+}
+.header>.row>div{
+    text-align: center;
+}
+.header>.row>div:last-child,.header>.row>div:first-child{
+    padding: 0;
+    line-height: 60px;
+    color: #080808;
+    font-size: 20px;
+}
+.header-search{
+    height: 100%;
+    line-height: 60px;
+    position: relative;
+}
+.header-search input{
+    width: 100%;
+   height: 60%;
+    background-color: #555555;
+    border: none;
+    outline: none;
+}
+.header-search input+span{
+    position: absolute;
+    font-size: 20px;
+    top:50%;
+    margin-top: -10px;
+    right:7%;
+    cursor: pointer;
+}
+.play-home-tittle {
+    height: 100%;
+}
+.play-home-tittle .header-logo{
+    height: 100%;
+}
+.play-home-tittle .header-logo img{
+    height: 60%;
+    float: left;
+    position: relative;
+    top:20%;
+    left: 10%;
+}
+/*********************底部***********************************/
+.play-bar,.play-home-footer{
+    bottom:50%;
+}
+.play-bar>.row>div{
+    height:60px;
+    line-height: 60px;
+}
+
+.play-bar .song-list tr{
+    transition: background-color 0.5s;
+}
+.play-bar .song-list tr:not(:first-child){
+    cursor: pointer;
+}
+.play-bar .song-list td{
+    text-align: left;
+    height: 50px;
+}
+.play-bar .song-list td a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.play-bar .song-list tr.playing{
+    background-color: rgba(27,151,203,1);
+}
+.play-bar .song-list tr:not(.playing):not(:first-child):nth-child(even){
+    background-color: rgba(192,192,192,0.1);
+}
+.play-bar .song-list tr:not(.playing):not(:first-child):nth-child(n):hover{
+    background-color: rgba(192,192,192,0.2);
+}
+.play-time>.currentTime ,.play-time>.duration{
+    padding: 0;
+    text-align: center;
+}
+.currentTime,.duration{
+    color: white;
+}
+.currentTimeSlided,.volumeSlided{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background-color: rgba(27,151,203,1);
+}
+.currentTimeBar,.volumeBar{
+    position: relative;
+    background-color: #b1aca0;
+    height: 3px;
+    margin-top:28px;
+    cursor: pointer;
+}
+.currentTimeBlock,.volumeBlock{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top:-4px;
+    left: 0;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.currentTimeBlock:before,.volumeBlock:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top:3px;
+    left:3px;
+    border-radius: 50%;
+    background-color: rgba(27,151,203,1);
+}
+.content{
+    position: absolute;
+    top:60px;
+    bottom:50%;
+    margin-bottom: 60px;
+    width: 100%;
+    z-index: 100;
+    transform-origin:0 100%;
+    transition: transform 1s ,opacity 1s;
+}
+/********************播放列表***********************/
+.song-list-container{
+    position: absolute;
+    height: 360px;
+    overflow: hidden;
+    right: 0;
+    width: 500px;
+    bottom:100%;
+    background-color: #555555;
+}
+.song-list-view{
+    width: 100%;
+    top:40px;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+}
+
+.song-list-container .song-list{
+    width: 100%;
+    text-indent: 5px;
+    position: absolute;
+}
+
+.song-list td:nth-child(2){
+    color: rgba(255,255,255,0.5);
+}
+.song-list-bar{
+    height: 40px;
+}
+.song-list-bar>.row{
+    height: 100%;
+}
+.song-list-bar li{
+    height: 100%;
+}
+.song-list-bar li:first-child{
+    text-align: left;
+}
+.song-list-bar li:nth-child(n+2){
+    text-align: right;
+}
+
+
+
+/****************************内容部分**********************************/
+.content>.row{
+    height: 100%;
+}
+.content-left,.content-right{
+    height: 100%;
+}
+.lp-container{
+    position: relative;
+    height: 70%;
+}
+.lp-container>div{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    background-image: url(../data/image/black.png);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:50px;
+}
+.lp-container>div:nth-child(1){
+    left:20%;
+    opacity: 1;
+}
+.lp-container>div>img{
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 25%;
+    top:25%;
+}
+.lp>img{
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    top:25%;
+    border-radius: 50%;
+}
+
+h3{
+    position: relative;
+}
+.btn-toggle{
+    font-size: 16px;
+    width: 20px;
+    height: 16px;
+}
+.btn-toggle>span{
+    color: rgba(192,192,192,0.5);
+}
+ul[class*='btnGroup-']>li button{
+    background:none;
+    border: none;
+    font-size: 20px;
+    color:rgba(192,192,192,0.8);
+    padding: 0;
+}
+ul[class*='btnGroup-']>li button:hover>span ,ul[class*='btnGroup-']>li a:hover>span{
+    color: rgba(27,151,203,1);
+}
+ul[class*='btnGroup-']>li button:focus{
+    border: none;
+    outline: none;
+}
+ul[class*='btnGroup-']>li{
+    padding: 0;
+    text-align: center;
+}
+.btnGroup-1,.btnGroup-2{
+    height: 100%;
+    line-height: 60px;
+}
+ul.btnGroup-3{
+    margin-top:-50px;
+}
+ul.btnGroup-2 a.btn-play-model{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgba(27,151,203,0.7);
+    cursor: pointer;
+}
+
+
+/******************content-right***********************/
+.content-right>ul>li,.content-right>h3{
+    height: 6%;
+
+}
+.lyric{
+    height: 78%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.lyric p{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left:0;
+}
+.content-right>ul>li:before,.content-right>ul>li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content-right>ul>li:before{
+    color: white;
+    width: 20px;
+}
+.content-right>ul>li:nth-child(1):before{
+    content:'专辑:';
+}
+.content-right>ul>li:nth-child(2):before{
+    content:'歌手:';
+}
+.content-right .btn-reduce{
+    background-color: #555555;
+    border: none;
+    position: absolute;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    right: -7%;
+    color: whitesmoke;
+    top:2%;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+.content-right .btn-reduce:hover{
+    opacity: 0.8;
+    color: rgba(27,151,203,1);
+}
+.content-right .btn-reduce:focus{
+    outline: none;
+}
+
+/****************评论部分*******************/
+.comment{
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    background-color: rgba(5,5,5,1);
+    bottom:60px;
+    width: 100%;
+    display: none;
+}
+
+.comment>.row,.comment>.row>.comment-left,.comment>.row>.comment-right{
+    height: 100%;
+}
+.comment-left>h3{
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(192,192,192,0.2);
+    height: 8%;
+}
+.comment-left>.send-comment{
+    height: 8%;
+    padding:10px 0;
+
+}
+.comment-left>.send-comment>input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #555555;
+}
+.comment-left>ul{
+    height: 80%;
+    margin: 0;
+    overflow: hidden;
+}
+.comment-left>ul li{
+    height: 70px;
+    padding: 10px 0;
+}
+.comment-left>ul li{
+    border-bottom: 1px solid silver;
+}
+.comment-left>ul li img{
+    height: 100%;
+    float: left;
+    margin-right:5px;
+    border-radius:50%;
+    cursor: pointer;
+}
+.comment-left>ul li a{
+    height: 50%;
+    display: block;
+    cursor: pointer;
+}
+.comment-left>ul li p{
+    height: 50%;
+}
+
+/********************playHome******************/
+.play-home{
+    position: absolute;
+    top:60px;
+    bottom:50%;
+    margin-bottom: 60px;
+    width: 100%;
+    background-color: #777777;
+    /*z-index: 888;*/
+}
+.play-home>.row{
+    height: 100%;
+}
+.play-home-left,.play-home-right{
+    height: 100%;
+    overflow:hidden;
+    background-color:black;
+}
+
+.play-home-left{
+    background: rgba(10,10,10,0.6);
+}
+.play-home-left a{
+    text-decoration: none;
+    color: #CCCCCC;
+}
+.play-home-left li{
+    display: block;
+    position: relative;
+    z-index: 3;
+    padding: 5px 0;
+    height: 30px;
+    transition: padding 0.5s;
+    box-sizing: content-box;
+    line-height: 30px;
+}
+.play-home-left li a{
+    display: inline-block;
+    margin-left:20px;
+    border-bottom: 1px solid transparent;
+    transition: border 0.5s;
+    line-height: 100%;
+}
+.play-home-left li:before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    transition: border 0.5s,transform 0.5s,opacity 0.5s;
+    border: 15px solid rgba(27,151,203,0.8);
+    border-radius: 50%;
+    transform:scale(0);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    top:50%;
+    margin-top:-15px;
+    left: -7px;
+}
+.play-home-left .item-open {
+    padding: 10px;
+}
+.play-home-left .item-open:before{
+    transform: scale(0.5);
+}
+.play-home-left-top,.play-home-left-xs,.play-home-adv-xs,.play-home-user-xs{
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    bottom: 60px;
+    width: 100%;
+}
+
+.play-home-left-xs,.play-home-adv-xs,.play-home-user-xs{
+    bottom: 0;
+    background-color:rgba(0,0,0,0.6);
+    color: black;
+}
+.play-home-left-xs h5{
+    background-color: #555555;
+    color: white;
+    margin: 0;
+}
+.play-home-left-top>h3,.play-home-left-xs>h3{
+    cursor: pointer;
+}
+.play-home-left-xs{
+    padding: 0;
+}
+.play-home-left-xs *{
+    padding-left: 8px;
+}
+.play-home-left-xs .song-menu-create li:first-child{
+    padding: 0;
+}
+.play-home-left-xs .song-menu-create li:nth-child(n+2),.play-home-left-xs .song-menu-collect li{
+    height: 60px;
+    display: inherit;
+    padding: 3px 0;
+}
+.play-home-left-xs .song-menu-create li img,.play-home-left-xs .song-menu-collect li img{
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.song-menu-collect .song-menu-create{
+    position: relative;
+}
+.play-home-left-xs .song-menu-create li a,.play-home-left-xs .song-menu-collect li a{
+    display: block;
+    height: 100%;
+    line-height: 60px;
+    margin-left: 80px;
+    border-bottom: 1px solid #CCCCCC;
+
+}
+.play-home-left-xs .create-title{
+    margin-top:60px ;
+}
+.page-xs-tittle{
+    height: 60px;
+    background-color: #262626;
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    z-index: 50;
+}
+.page-xs-tittle .logo{
+    height: 100%;
+}
+.page-xs-tittle .logo img{
+    height: 60%;
+    position: relative;
+    left: 10%;
+}
+.page-xs-tittle h4{
+    line-height: 60px;
+    height: 60px;
+    margin-top:0 ;
+    margin-bottom: 0;
+}
+
+.adv-page .page-xs-tittle{
+    margin-left: -30px;
+}
+
+.play-home-left-xs .create-title,.play-home-left-xs .collect-title{
+    padding-left: 16px;
+}
+.play-home a {
+    cursor: pointer;
+}
+.play-home-right-top{
+    height: 200px;
+    width:100%;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding: 0 15px;
+    position: relative;
+}
+.play-home-right-holder{
+    top:0;
+    bottom: 0;
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    width: 100%;
+}
+.play-home-right-holder>div{
+    height: 100%;
+}
+.song-menu-page{
+    height: 100%;
+    display: none;
+}
+.song-menu-message ul{
+    overflow: hidden;
+}
+.song-menu-message ul li{
+    float: left;
+    margin-right: 10px;
+}
+.song-menu-message ul li button{
+    margin: 0;
+}
+.song-menu-tittle{
+    background: inherit;
+    position: relative;
+    z-index: 100;
+    height: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+
+/*******************play-home-right**********************/
+
+.play-home-right-top .song-menu-message{
+    height: 100%;
+    padding-left:30px;
+}
+.play-home-right-top .song-menu-cover{
+    height: 100%;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin:0 15px;
+
+}
+.play-home-right-top .song-menu-message>a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.song-menu-opera>li>a{
+    color: white;
+    text-decoration:none;
+}
+.song-menu-opera>li{
+    border-radius: 5%;
+    background: #555555;
+}
+.song-menu-opera>li>a{
+    padding: 0 5px;
+}
+.song-menu-opera>li>a:nth-child(2){
+    border-left:1px solid white; ;
+}
+/*song-menu-table*/
+.play-home-right .song-menu-table td{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.song-menu-table{
+    width: 100%;
+}
+.song-menu-table td:nth-child(n+2){
+    border-bottom: 1px solid #555555;
+}
+.song-menu-table td:nth-child(2) a{
+    width: 100%;
+    display: block;
+
+}
+.song-menu-table td:nth-child(2):hover a{
+    width: 60%;
+}
+.song-menu-table td:nth-child(2) .song-opera{
+    display: none;
+}
+.song-menu-table td:nth-child(2):hover .song-opera{
+    position: absolute;
+    width: 40%;
+    display: block;
+    bottom:0;
+    right: 0;
+    margin: 0;
+}
+/*********************************************************/
+
+.btn-song-opera{
+    position: absolute;
+    right:0;
+    margin: 0;
+    bottom: 0;
+}
+.song-opera a{
+    text-align: center;
+    color: white;
+}
+.song-opera a:hover{
+    color: #0b97c4;
+}
+
+.play-home-right-bottom{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top:270px;
+    bottom: 0;
+}
+
+
+/**********min-window***********/
+.min-content{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(27,151,203,1);
+    display: none;
+    z-index: 3;
+}
+.min-content>h4,.min-content>h5{
+    padding: 0;
+    margin: 0;
+    color: #555555;
+    line-height: 30px;
+    height: 50%;
+}
+.min-content a:not(.btn-max-content){
+    text-decoration: none;
+    color: inherit;
+}
+.min-content .btn-max-content{
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.btn-max-content>img{
+    height: 60px;
+}
+.btn-max-content>span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top:0;
+    font-size: 30px;
+    line-height: 60px;
+    color: #555555;
+    text-align: center;
+    display: none;
+    background-color: rgba(1,1,1,0.5);
+}
+.btn-max-content:hover>span{
+    display: block;
+}
+
+
+.btn-xs-back-play-home{
+    position: absolute;
+    left:10px;
+    top:50%;
+    margin-top: -7px;
+}
+
+.play-home-footer{
+    position: absolute;
+    bottom: 50%;
+    left: 0;;
+    margin: 0;
+    background-color: black;
+}
+.play-home-footer span{
+    font-size: 20px;
+}
+.play-home-footer a{
+    height: 100%;
+    padding: 0;
+    color: whitesmoke;
+    display: block;
+    padding-top:10px;
+}
+.adv-page{
+    height: 100%;
+    padding:30px;
+    position: relative;
+    overflow: hidden;
+}
+.adv-page-top{
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+/*.adv-page-content{*/
+    /*height: 50%;*/
+/*}*/
+.adv-page-top img{
+    width: 100%;
+}
+.adv-content-item{
+    position: relative;
+}
+.item-top{
+    width: 100%;
+    position: relative;
+}
+.adv-content-item img{
+    width: 100%;
+    transition: box-shadow 0.5s;
+}
+.adv-content-item:hover img{
+    box-shadow: 2px 2px  1px black;
+}
+.adv-item-btn{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+}
+.adv-item-btn>span{
+    position: absolute;
+    font-size: 40px;
+    left:50%;
+    top:50%;
+    margin-top:-20px;
+    margin-left: -20px;
+
+}
+.item-top:hover .adv-item-btn{
+    opacity: 1;
+}
+.adv-page-content .title-row{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555555;
+}
+.adv-page-tittle-xs{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 60px;
+    width: 100%;
+    margin-bottom:60px;
+    background: black;
+    z-index: 100;
+}
+/*--------userPage-----------------*/
+.user-page{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    min-height: 420px;
+
+
+}
+.user-page a{
+    color: white;
+}
+.user-page .row{
+    margin: 0;
+    padding: 10px;
+}
+.user-page .row:first-child,.user-page .row:nth-child(2){
+    height: 60px;
+    line-height: 60px;
+}
+.user-page .row:first-child img{
+    height: 100%;
+    border-radius: 50%;
+}
+.user-page .row:first-child h4{
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+    line-height: 40px;
+    vertical-align: top;
+}
+.user-page .row:first-child a{
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+    vertical-align: top;
+}
+.user-page  a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.user-page .user-message a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+
+}
+.user-page .user-message li:nth-child(-n+2){
+    border-right: 1px solid #555555 ;
+}
+.user-page ul.user-opera{
+    overflow: hidden;
+    position: absolute;
+    /*margin-left: -10px;*/
+    margin-right: -20px;
+    top:140px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+.user-page .user-opera li{
+    height: 60px;
+    padding: 10px;
+    margin-right:-10px;
+    margin-left:-10px;
+}
+.user-page .user-opera li:hover{
+    background-color: #555555;
+}
+.user-page .user-opera li a{
+    font-size: 14px;
+    height: 100%;
+    display: inline-block;
+    line-height: 40px;
+    width: 100%;
+}
+.user-page .user-opera li a span{
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+}
+.user-page .user-opera li:last-child a{
+    color: brown;
+}
+.user-page .user-opera li:first-child,.user-page .user-opera li:nth-child(4){
+    border-top:1px solid #555555 ;
+}
+.btn-user{
+    color: white;
+}
+.btn-user+*{
+    display: none;
+}
+.btn-user:focus+*{
+    display: block;
+}
+
+/*----------------dialog---------*/
+.jo-dialog-wrap{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right:0;
+    /*background-color: rgba(1,1,1,0.6);*/
+    z-index: 10000;
+    display: none;
+}
+.jo-dialog-window{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top:75%;
+    margin-top:-125px;
+    margin-left: -200px;
+    background-color: rgb(45,47,51);
+    box-shadow: 0 0 2px 1px #000000;
+    transition: transform 0.3s;
+    transform: scale(0);
+}
+.jo-dialog-top>h4{
+    padding: 4px 5%;
+}
+.jo-dialog-window>div{
+    float: left;
+    width: 100%;
+
+}
+.jo-dialog-content{
+    height: 50%;
+}
+
+.jo-dialog-top,.jo-dialog-top span{
+    color: rgba(177,177,177,0.5);
+}
+.jo-dialog-top span:hover{
+    color: rgba(177,177,177,1);
+}
+.jo-dialog-content textarea{
+    color: rgba(255,255,255,0.6);
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    background-color: #777777;
+    border: none;
+    resize:none;
+}
+.jo-dialog-bottom{
+    padding: 0 5%;
+    position: relative;
+    height: 26%;
+}
+.jo-dialog-bottom button{
+    position: relative;
+    height: 70%;
+    top:15%;
+    width: 80px;
+    display: block;
+    float: right;
+    color: rgba(255,255,255,0.6);
+    background-color: #0b97c4;
+}
+.show-dialog{
+    transform: scale(1);
+}
+.tip-dialog{
+    transition: transform 0.1s linear;
+    transform: scale(1.05);
+}

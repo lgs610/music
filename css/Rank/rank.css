@@ -1,0 +1,104 @@
+.Rank{
+	width:1200px ;
+	height: 1800px;
+	margin:80px auto;
+}
+	.Rank_left{
+		float:left;
+		width:180px;
+		border: 1px solid rgba(255,255,255,0.5);
+	}
+		
+		.Rank_left span{
+			width:100% ;
+			position: relative;
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+			font-family: "幼圆";
+			font-size: 30px;
+			padding: 10px 0;
+		}
+		.Rank_left span:after{
+			content: "";
+			position: absolute;
+			width:80%;
+			height: 1px;
+			background: rgba(255,255,255,0.5);
+			left: 10%;
+			top: 100%;
+		}
+		.Rank_left ul{
+			padding: 0;
+			list-style: none;
+		}
+			.Rank_left ul li a{
+				font-family: "微软雅黑";
+				display: block;
+				font-size: 16px;
+				padding:10px 15px;
+			}
+			.Rank_left ul li a:hover{color: #1697CB;}
+			.Rank_left ul li a:focus{color: white;}
+	.Rank_right{
+		float: right;
+		width: 990px;
+		margin-left: 30px;
+	}
+		.Rank_right_title{
+			height: 63px;
+			line-height: 63px;
+		}
+		.Rank_right_title>span{
+			font-family: "微软雅黑";
+		}
+			.Rank_right_titlename{font-size: 30px;}
+			
+			.Rank_right_titlerule,.Rank_right_titletime{color: #AAAAAA;padding: 0px 20px;}
+		
+		.Rank_right_Btn button{
+			border: 1px solid rgba(255,255,255,0.5);
+			background: none;
+			width: 120px;
+			padding: 10px 15px;
+		}
+		.Rank_right_Btn button:hover{
+			background: #1697CB;
+		}
+
+.div_tbl{
+	width: 990px;
+	height: 1600px;
+	margin-top: 30px;
+}
+.music_tbl{
+	width: 990px;
+	margin: 0 auto;
+}
+	.music_th{
+		background: black;
+		height: 60px;
+	}
+		.music_th th{
+			text-align: center;
+		}
+	.music_tbl .music_tr{
+		height: 60px;
+	}
+		.music_tbl .music_tr a{
+			color: white;
+			text-decoration: none;
+		}
+			.music_tbl .music_tr a:hover{
+				text-decoration: underline;
+			}
+	
+		.music_tr:nth-child(2n+1){
+			background: #222222;
+		}
+			.music_tbl .music_tr:hover{
+				background: #1697CB;
+			}
+		.music_tbl td{
+			text-align: center;
+		}

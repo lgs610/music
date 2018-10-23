@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html ng-app="SongerApp" ng-controller="Controller_songer">
+	<head>
+		<meta charset="UTF-8">
+		<title>Songer</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/Home.css"/>
+		<link rel="stylesheet" href="css/Paging.css" />
+		<link rel="stylesheet" href="css/Songer/songer.css" />
+		<script type="text/javascript" src="jQuery/jquery-3.0.0.js" ></script>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<style>
+			html{
+				font-size: 12px;	
+			}
+			body{
+				background: #333333;
+				margin: 0;
+				padding: 0;
+				color: white;
+				font-family: "微软雅黑";
+			}
+			@font-face {
+				font-family:manbow;
+				src: url("font/manbow clear.ttf");
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	描述：页头
+        -->
+		<div class="head">
+			<div class="head_top">
+				<div class="head_top_logo">
+					<img src="img/Head/Logo.png">
+					<span>Slow Music</span>
+				</div>
+				<ul class="head_ul">
+					<li>Music Library</li>
+					<li>My Music</li>
+				</ul>
+				<div class="head_find">
+					<input type="text" id="home_find_input">
+					<span class="glyphicon glyphicon-search"></span>
+				</div>
+				<div class="head_login">
+					<a href="#">Login</a>&nbsp;|&nbsp;<a href="#">Register</a>
+				</div>
+			</div>
+			<div class="nav_div">
+				<a href="Home_page.html">Home</a>
+				<a href="songer.html" style="color: #1697CB;">songer</a>
+				<a href="Song_Menu.html">Song Menu</a>
+				<a href="Special.html">Special</a>
+				<a href="Rank.html">Rank</a>
+				<a href="MV.html">MV</a>
+			</div>
+		</div>
+		
+		<!--
+        	描述：分类
+        -->
+		<div class="songerKind">
+			<div class="songKind_div">
+				<span><a href="#" style="margin: 0;" class="songKind_div_a">全部</a></span>
+				<a href="#">华语男</a>
+				<a href="#">华语女</a>
+				<a href="#">华语组合</a>
+				<a href="#">韩国男</a>
+				<a href="#">韩国女</a>
+				<a href="#">韩国组合</a>
+				<a href="#">日本男</a>
+				<a href="#">日本女</a>
+				<a href="#">日本组合</a>
+				<a href="#">欧美女</a>
+				<a href="#">欧美女</a>
+				<a href="#">欧美组合</a>
+				<a href="#">乐团</a>
+				<a href="#">演奏家</a>
+				<a href="#">作曲家</a>
+				<a href="#">指挥家</a>
+				<a href="#">其他</a>
+			</div>
+			<div class="songKind_hot">
+				<span><a href="#" style="margin: 0;" class="songKind_div_a">热门</a></span>
+				<a href="#">A</a>
+				<a href="#">B</a>
+				<a href="#">C</a>
+				<a href="#">D</a>
+				<a href="#">E</a>
+				<a href="#">F</a>
+				<a href="#">G</a>
+				<a href="#">H</a>
+				<a href="#">I</a>
+				<a href="#">J</a>
+				<a href="#">K</a>
+				<a href="#">L</a>
+				<a href="#">M</a>
+				<a href="#">N</a>
+				<a href="#">O</a>
+				<a href="#">P</a>
+				<a href="#">Q</a>
+				<a href="#">R</a>
+				<a href="#">S</a>
+				<a href="#">T</a>
+				<a href="#">U</a>
+				<a href="#">V</a>
+				<a href="#">W</a>
+				<a href="#">X</a>
+				<a href="#">Y</a>
+				<a href="#">Z</a>
+				<a href="#">#</a>
+			</div>
+		</div>
+		
+		
+		<div class="kind_choose">
+			<div class="songMenuChoose">全部歌手</div>
+			<button class="songMenuHot">最热</button>
+			<button class="songMenuNew">最新</button>
+		</div>
+		<!--
+        	描述：歌手样子
+        -->
+        <div class="songerImg">
+        	<div class="songerPart" ng-repeat="x in DataSonger">
+        		<div class="songerPart_img"><a href="#"><img ng-src="{{x.songerImg}}"/></a></div>
+        		<div class="songerPart_songername"><a href="#">{{x.songer}}</a></div>
+        	</div>
+        </div>
+		
+		<!--
+        	描述：歌手
+        -->
+			<!--
+        		描述：分页插件,
+        		"width":按钮的大小
+				"marginInterval":按钮之间的间隔（一边）
+				"pageArrNumber":按钮的个数
+				"pageRowCount":每页多少行数据
+				"trHeight":每行数据的高度
+				Angular：
+				onePageData：每页的数据存放数组
+       	-->
+		<div class="paging" data-setting='{
+				"width":50,
+				"marginInterval":2,
+				"pageArrNumber":7,
+				"pageRowCount":18
+			}'>
+			<div class="div_tbl">
+			<table class="music_tbl">
+				<tr class="music_tr" ng-repeat="x in onePageData">
+					<td><a href={{x.songerRow1.songerHref}}>{{x.songerRow1.songerName}}</a></td>
+					<td><a href={{x.songerRow2.songerHref}}>{{x.songerRow2.songerName}}</a></td>
+					<td><a href={{x.songerRow3.songerHref}}>{{x.songerRow3.songerName}}</a></td>
+					<td><a href={{x.songerRow4.songerHref}}>{{x.songerRow4.songerName}}</a></td>
+					<td><a href={{x.songerRow5.songerHref}}>{{x.songerRow5.songerName}}</a></td>
+				</tr>
+				
+			</table>
+			</div>
+			
+			<ul class="paging_ul">
+				<li class="paging_li" ng-click="page_Frist()">首</li>
+				<li class="paging_li" ng-click="pageprev()">&lt;</li>
+				<li class="paging_li paging_Btn" ng-repeat="(key,value) in pageCountArr track by key" ng-click="pageBtn($event)" ng-mouseover="pageBtnOver($event)" ng-mouseleave="pageBtnLeave($event)" data-index={{$index}}>{{pageCountArr[$index]}}</li>
+				<li class="paging_li" ng-click="pagenext()">&gt;</li>
+				<li class="paging_li" ng-click="page_End()">尾</li>
+				<li class="paging_li"><input class="paging_ipt" type="text" maxlength="3"/></li>
+				<li class="paging_li" ng-click="pageGo()">GO</li>
+			</ul>
+		</div>	
+		<!--
+        	描述：页尾
+        -->
+		<div class="Home_End">
+        	<div class="Home_End_content">
+				<div class="Introduce">
+					<dl style="height: 150px;">
+						<dt><a href="#">下载客户端</a></dt>
+						<dd>
+							<a href="#">PC版</a>
+						</dd>
+						<dd>
+							<a href="#">Mac版</a>
+						</dd>
+						<dd>
+							<a href="#">Android版</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">IPhone版</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">特色产品</a></dt>
+						<dd>
+							<a href="#">K歌</a>
+						</dd>
+						<dd>
+							<a href="#">Super Sound</a>
+						</dd>
+						<dd>
+							<a href="#">QPlay</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">演出</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">合作</a></dt>
+						<dd>
+							<a href="#">CJ E&M</a>
+						</dd>
+						<dd style="margin-bottom: 74px;">
+							<a href="#">腾讯视频</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">链接</a></dt>
+						<dd>
+							<a href="#">新浪微博</a>
+						</dd>
+						<dd>
+							<a href="#">腾讯微博</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">FackBook</a>
+						</dd>
+					</dl>
+					<dl style="margin-left: 25%;">
+						<dt><a href="#">我的音乐</a></dt>
+						<dd>
+							<a href="#">现有音乐</a>
+						</dd>
+						<dd>
+							<a href="#">查看音乐</a>
+						</dd>
+						<dd>
+							<a href="#">我的记忆</a>
+						</dd>
+						<dd>
+							<a href="#">账户设置</a>
+						</dd>
+						<dd>
+							<a href="#">音乐库</a>
+						</dd>
+						<dd>
+							<a href="#">我的优惠券</a>
+						</dd>
+						<dd>
+							<a href="#">我的收藏</a>
+						</dd>
+						<dd>
+							<a href="#">我的评论</a>
+						</dd>
+					</dl>
+					<dl style="margin-right: 25%;">
+						<dt><a href="#">帮助和搜索指南</a></dt>
+						<dd>
+							<a href="#">账户</a>
+						</dd>
+						<dd>
+							<a href="#">歌手</a>
+						</dd>
+						<dd>
+							<a href="#">歌单</a>
+						</dd>
+						<dd>
+							<a href="#">专辑</a>
+						</dd>
+						<dd>
+							<a href="#">单曲</a>
+						</dd>
+						<dd>
+							<a href="#">MV</a>
+						</dd>
+						<dd>
+							<a href="#">联系我们</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="End">
+				<ul>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+					<li>
+						<a href="#">帮助和购物指南</a>
+					</li>
+					<li>
+						<a href="#">法律声明</a>
+					</li>
+					<li>
+						<a href="#">使用原则</a>
+					</li>
+				</ul>
+				<div>
+				</div>
+				<span>
+					SlowMusic（中国）有限公司 保留所有权利    湘ICP备******号-2
+				</span>
+			</div>
+        </div>
+	</body>
+	<script type="text/javascript" src="js/Songer/ng-songer.js" ></script>
+</html>

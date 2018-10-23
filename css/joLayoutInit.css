@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+/*初始化及复用样式*/
+a:focus{
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+.oHide{
+    overflow: hidden;
+}
+.text-over-point{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.stress-color{
+    color:#0b97c4 ;
+}
+
+.play-bg{
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    position: absolute;
+    left:-10%;
+    top:-10%;
+}
+/*********jo-btn*************/
+.jo-btn{
+    background-color: rgba(27,151,203,0.7);
+    border: none;
+    border-radius: 10%;
+    padding: 5px;
+    color: white;
+    margin-right: 20px;
+}
+.jo-btn:hover{
+    background-color: rgba(27,151,203,1);
+}
+.jo-btn-active{
+    color: rgba(27,151,203,0.7);
+}
+.btn-hide{
+    background: none;
+    border: none;
+}
+.btn-hide:focus{
+    outline: none;
+}
+/************************************************/

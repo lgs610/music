@@ -1,0 +1,44 @@
+{
+  "success":"true",
+  "package":{
+      "songMenuId":"001",
+      "songMenuArr":[
+        {
+          "songId":"00111",
+          "songName":"Hello",
+          "songSrc":"data/song/Adele - Hello.mp3",
+          "singerId":"001",
+          "albumId":"0011",
+          "commentListId":"00111",
+          "lyric":".....",
+          "singerName":"Adele",
+          "albumName":"Hello",
+          "albumCoverUrl":"data/image/Hello.jpg"
+        },
+        {
+          "songId":"00121",
+          "songName":"Set Fire to the Rain",
+          "songSrc":"data/song/Adele - Set Fire to the Rain.mp3",
+          "singerId":"001",
+          "albumId":"0012",
+          "commentListId":"00121",
+          "lyric":".....",
+          "singerName":"Adele",
+          "albumName":"21",
+          "albumCoverUrl":"data/image/21.jpg"
+        },
+        {
+          "songId":"00131",
+          "songName":"Someone Like You",
+          "songSrc":"data/song/Adele - Someone Like You.mp3",
+          "singerId":"001",
+          "albumId":"0013",
+          "commentListId":"00131",
+          "lyric":".....",
+          "singerName":"Adele",
+          "albumName":"Someone Like you",
+          "albumCoverUrl":"data/image/Someone Like You.jpg"
+        }
+      ]
+  }
+}

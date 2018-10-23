@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html ng-app="MyMusicApp" ng-controller="MyMusic_con">
+	<head>
+		<meta charset="UTF-8">
+		<title>Rank</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/Home.css"/>
+		<link rel="stylesheet" href="css/Paging.css" />
+		<link rel="stylesheet" href="css/Rank/rank.css" />
+		<script type="text/javascript" src="jQuery/jquery-3.0.0.js" ></script>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<style>
+			html{
+				font-size: 12px;	
+			}
+			body{
+				background: #333333;
+				margin: 0;
+				padding: 0;
+				color: white;
+				font-family: "微软雅黑";
+			}
+			@font-face {
+				font-family:manbow;
+				src: url("font/manbow clear.ttf");
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	描述：页头
+        -->
+		<div class="head">
+			<div class="head_top">
+				<div class="head_top_logo">
+					<img src="img/Head/Logo.png">
+					<span>Slow Music</span>
+				</div>
+				<ul class="head_ul">
+					<li>Music Library</li>
+					<li>My Music</li>
+				</ul>
+				<div class="head_find">
+					<input type="text" id="home_find_input">
+					<span class="glyphicon glyphicon-search"></span>
+				</div>
+				<div class="head_login">
+					<a href="#">Login</a>&nbsp;|&nbsp;<a href="#">Register</a>
+				</div>
+			</div>
+			<div class="nav_div">
+				<a href="Home_page.html">Home</a>
+				<a href="songer.html">songer</a>
+				<a href="Song_Menu.html">Song Menu</a>
+				<a href="Special.html">Special</a>
+				<a href="Rank.html" style="color: #1697CB;">Rank</a>
+				<a href="MV.html">MV</a>
+			</div>
+		</div>
+		
+		
+		
+		<div class="paging" data-setting='{
+				"width":50,
+				"marginInterval":2,
+				"pageArrNumber":7,
+				"pageRowCount":25
+			}'>
+			<div class="Rank">
+				<div class="Rank_left">
+					<span class="Rank_left_title">音乐排行榜</span>
+					<ul>
+						<li><a class="RankM" href="#/template/rank/rank_pop.html">音乐榜·流行指数</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_hot.html">音乐榜·热歌</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_new.html">音乐榜·新歌</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_online.html">音乐榜·网络歌曲</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_hinterland.html">音乐榜·内地</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_ht.html">音乐榜·港台</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_EA.html">音乐榜·欧美</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_korea.html">音乐榜·韩国</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_JP.html">音乐榜·日本</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_sell.html">音乐榜·畅销</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_Ksong.html">音乐榜·K歌金曲</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_MV.html">音乐榜·MV</a></li>
+					</ul>
+					<span class="Rank_left_title">全球榜</span>
+					<ul>
+						<li><a class="RankM" href="#/template/rank/rank_USA.html">美国公告牌榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_Mnet.html">韩国Mnet榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_UK.html">英国UK榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_JAPANESE.html">日本公信榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_HK.html">香港电台榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_HONGKONG.html">香港商台榜</a></li>
+						<li><a class="RankM" href="#/template/rank/rank_TW.html">台湾幽浮榜</a></li>
+					</ul>
+				</div>
+				<div class="Rank_right" ng-view>
+					
+				</div>
+			</div>
+			
+		</div>
+		<!--
+        	描述：页尾
+        -->
+		<div class="Home_End">
+        	<div class="Home_End_content">
+				<div class="Introduce">
+					<dl style="height: 150px;">
+						<dt><a href="#">下载客户端</a></dt>
+						<dd>
+							<a href="#">PC版</a>
+						</dd>
+						<dd>
+							<a href="#">Mac版</a>
+						</dd>
+						<dd>
+							<a href="#">Android版</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">IPhone版</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">特色产品</a></dt>
+						<dd>
+							<a href="#">K歌</a>
+						</dd>
+						<dd>
+							<a href="#">Super Sound</a>
+						</dd>
+						<dd>
+							<a href="#">QPlay</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">演出</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">合作</a></dt>
+						<dd>
+							<a href="#">CJ E&M</a>
+						</dd>
+						<dd style="margin-bottom: 74px;">
+							<a href="#">腾讯视频</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">链接</a></dt>
+						<dd>
+							<a href="#">新浪微博</a>
+						</dd>
+						<dd>
+							<a href="#">腾讯微博</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">FackBook</a>
+						</dd>
+					</dl>
+					<dl style="margin-left: 25%;">
+						<dt><a href="#">我的音乐</a></dt>
+						<dd>
+							<a href="#">现有音乐</a>
+						</dd>
+						<dd>
+							<a href="#">查看音乐</a>
+						</dd>
+						<dd>
+							<a href="#">我的记忆</a>
+						</dd>
+						<dd>
+							<a href="#">账户设置</a>
+						</dd>
+						<dd>
+							<a href="#">音乐库</a>
+						</dd>
+						<dd>
+							<a href="#">我的优惠券</a>
+						</dd>
+						<dd>
+							<a href="#">我的收藏</a>
+						</dd>
+						<dd>
+							<a href="#">我的评论</a>
+						</dd>
+					</dl>
+					<dl style="margin-right: 25%;">
+						<dt><a href="#">帮助和搜索指南</a></dt>
+						<dd>
+							<a href="#">账户</a>
+						</dd>
+						<dd>
+							<a href="#">歌手</a>
+						</dd>
+						<dd>
+							<a href="#">歌单</a>
+						</dd>
+						<dd>
+							<a href="#">专辑</a>
+						</dd>
+						<dd>
+							<a href="#">单曲</a>
+						</dd>
+						<dd>
+							<a href="#">MV</a>
+						</dd>
+						<dd>
+							<a href="#">联系我们</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="End">
+				<ul>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+					<li>
+						<a href="#">帮助和购物指南</a>
+					</li>
+					<li>
+						<a href="#">法律声明</a>
+					</li>
+					<li>
+						<a href="#">使用原则</a>
+					</li>
+				</ul>
+				<div>
+				</div>
+				<span>
+					SlowMusic（中国）有限公司 保留所有权利    湘ICP备******号-2
+				</span>
+			</div>
+        </div>
+	</body>
+	<script type="text/javascript" src="js/Rank/ng_rank.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank1.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank2.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank3.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank4.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank5.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank6.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank7.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank8.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank9.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank10.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank11.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank12.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank13.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank14.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank15.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank16.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank17.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank18.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank19.js" ></script>
+	<script type="text/javascript" src="js/Rank/ng-rank20.js" ></script>
+</html>

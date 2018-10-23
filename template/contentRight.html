@@ -1,0 +1,18 @@
+<div class="content-right col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1
+                col-sm-8 col-sm-offset-2 hidden-xs" ng-click="resContentChange()">
+    <h3 class="hidden-xs hidden-sm" ng-bind="source.songList[source.playIndex].songName"></h3>
+    <ul class="row">
+        <li class="col-md-5 col-lg-5 hidden-xs hidden-sm">
+            <a href="" ng-bind="source.songList[source.playIndex].albumName "></a>
+        </li>
+        <li class="col-md-5 col-lg-5 hidden-xs hidden-sm ">
+            <a href="" ng-bind="source.songList[source.playIndex].singerName"></a>
+        </li>
+    </ul>
+    <div class="lyric" >
+        <P ng-bind="source.songList[source.playIndex].lyric"></P>
+    </div>
+    <button class="btn-reduce visible-md visible-lg" ng-click="reduce()">
+        <span class="glyphicon glyphicon-resize-small"></span>
+    </button>
+</div>

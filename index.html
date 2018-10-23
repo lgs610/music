@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{margin: 0;padding: 0;}
+			@keyframes blow-up{
+				50%{opacity: 1;transform: scale(1.2);}
+				65%{opacity: 1;transform: scale(0.9);}
+				85%{opacity: 1;transform: scale(1.1);}
+				100%{opacity: 1;transform: scale(1);}
+			}
+			.part1{
+				
+				margin: 0 auto;
+				font-family: "微软雅黑";
+				font-size: 100px;
+				color: white;
+				text-align: center;
+			}
+			.imgborder{
+				position: absolute;left: 100px;top:100px; width: 200px;height: 200px;overflow: hidden;
+				border-radius:100% ;
+				opacity: 0;
+				animation-name:blow-up ;
+				animation-duration: 0.75s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: 1;
+				transition: box-shadow 0.25s;
+			}
+			.imgborder:hover{
+				box-shadow: 0px 0px 15px 5px #1769bc;
+			}
+			.imgbubble{
+				transition: transform 0.25s;
+			}
+			.imgbubble:hover{
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+			.one,.two,.three,.four,.five{
+				width: 100%;
+				position: relative;
+			}
+			.bulr1 img{
+				-webkit-filter: blur(3px); /* Chrome, Opera */
+		       	-moz-filter: blur(3px);
+		        -ms-filter: blur(3px);   
+		            filter: blur(3px);
+			}
+			.bulr5 img{
+				-webkit-filter: blur(2px); /* Chrome, Opera */
+		       	-moz-filter: blur(2px);
+		        -ms-filter: blur(2px);   
+		            filter: blur(2px);
+			}
+		</style>
+			
+	</head>
+	<body background="img/bg_index_new.jpg">
+		<div class="one">
+			<div class="imgborder tone"><div class="bulr1"><img class="imgbubble" src="img/home_carousel/China/China1.jpg" width="100%"/></div></div>
+			<div class="imgborder tone"><div class="bulr1"><img class="imgbubble" src="img/home_carousel/China/China2.jpg" width="100%"/></div></div>
+			<div class="imgborder tone"><div class="bulr1"><img class="imgbubble" src="img/home_carousel/China/China3.jpg" width="100%"/></div></div>
+			<div class="imgborder tone"><div class="bulr1"><img class="imgbubble" src="img/home_carousel/China/China4.jpg" width="100%"/></div></div>
+		</div>
+		<div class="two">
+			<div class="imgborder ttwo"><div class="bulr2"><img class="imgbubble" src="img/home_carousel/China/China5.jpg" width="100%"/></div></div>
+			<div class="imgborder ttwo"><div class="bulr2"><img class="imgbubble" src="img/home_carousel/China/China6.jpg" width="100%"/></div></div>
+			<div class="imgborder ttwo"><div class="bulr2"><img class="imgbubble" src="img/home_carousel/China/China7.jpg" width="100%"/></div></div>
+			<div class="imgborder ttwo"><div class="bulr2"><img class="imgbubble" src="img/home_carousel/China/China8.jpg" width="100%"/></div></div>
+		</div>
+		<div class="three">
+			<div class="imgborder tthree"><div class="bulr3"><img class="imgbubble" src="img/home_carousel/China/China9.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr3"><img class="imgbubble" src="img/home_carousel/China/China10.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr3"><img class="imgbubble" src="img/home_carousel/China/China11.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr3"><img class="imgbubble" src="img/home_carousel/China/China12.jpg" width="100%"/></div></div>
+		</div>
+		<div class="four">
+			<div class="imgborder tthree"><div class="bulr4"><img class="imgbubble" src="img/home_carousel/Japanese/Jp1.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr4"><img class="imgbubble" src="img/home_carousel/Japanese/Jp2.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr4"><img class="imgbubble" src="img/home_carousel/Japanese/Jp3.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr4"><img class="imgbubble" src="img/home_carousel/Japanese/Jp4.jpg" width="100%"/></div></div>
+		</div>
+		<div class="five">
+			<div class="imgborder tthree"><div class="bulr5"><img class="imgbubble" src="img/home_carousel/Japanese/Jp5.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr5"><img class="imgbubble" src="img/home_carousel/Japanese/Jp6.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr5"><img class="imgbubble" src="img/home_carousel/Japanese/Jp7.jpg" width="100%"/></div></div>
+			<div class="imgborder tthree"><div class="bulr5"><img class="imgbubble" src="img/home_carousel/Japanese/Jp8.jpg" width="100%"/></div></div>
+		</div>
+	</body>
+	
+	<script>
+		window.onload=function(){
+			
+			var height=document.documentElement.clientHeight;
+			var width=document.documentElement.clientWidth-50;
+			var img1=document.getElementsByClassName("tone");
+			var img2=document.getElementsByClassName("ttwo");
+			var img3=document.getElementsByClassName("tthree");
+			var one=document.getElementsByClassName("one")[0];
+			var onetop=height*0.1;
+			one.style.top=onetop+"px";
+
+			var two=document.getElementsByClassName("two")[0];
+			var twotop=height*1;
+			two.style.top=twotop+"px";
+
+			var three=document.getElementsByClassName("three")[0];
+			var threetop=height*1;
+			three.style.top=threetop+"px";
+
+			var four=document.getElementsByClassName("four")[0];
+			var fourtop=height*1;
+			four.style.top=fourtop+"px";
+
+			var five=document.getElementsByClassName("five")[0];
+			var fivetop=height*1;
+			five.style.top=fivetop+"px";
+
+			for(var i=0;i<img1.length;++i){
+				var w=Math.random()*60+60;
+				img1[i].style.width=img1[i].style.height=w+"px"
+				img1[i].style.top=Math.random()*height+"px";
+				var iw=Math.random()*width;
+				if(iw+w>=width){
+					img1[i].style.left=iw-w+"px";
+				}else if(iw-w<=0){
+					img1[i].style.left=iw+w+"px";
+				}else{
+					img1[i].style.left=iw+"px";
+				}
+			}
+			for(var i=0;i<img2.length;++i){
+				var w=Math.random()*100+150;
+				img2[i].style.width=img2[i].style.height=w+"px"
+				img2[i].style.top=Math.random()*height+"px";
+				var iw=Math.random()*width;
+				if(iw+w>=width){
+					img2[i].style.left=iw-w+"px";
+				}else if(iw-w<=0){
+					img2[i].style.left=iw+w+"px";
+				}else{
+					img2[i].style.left=iw+"px";
+				}
+			}
+			for(var i=0;i<img3.length;++i){
+				var w=Math.random()*150+200;
+				img3[i].style.width=img3[i].style.height=w+"px"
+				img3[i].style.top=Math.random()*height+"px";
+				var iw=Math.random()*width;
+				if(iw+w>=width){
+					img3[i].style.left=iw-w+"px";
+				}else if(iw-w<=0){
+					img3[i].style.left=iw+w+"px";
+				}else{
+					img3[i].style.left=iw+"px";
+				}
+			}
+//			window.onscroll=function(){
+//				var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+//				one.style.top=onetop-scrollTop*0.2+"px";
+//				two.style.top=twotop-scrollTop*0.8+"px";
+//				three.style.top=threetop-scrollTop*1.2+"px";
+//				four.style.top=fourtop-scrollTop*1.6+"px";
+//				five.style.top=fivetop-scrollTop*2+"px";
+//			}
+			var time;
+			var img = document.getElementsByClassName("imgborder");
+			for(var i=0;i<img.length;++i){
+				img[i].onmousemove=function(){
+					clearInterval(time);
+				}
+				img[i].onmouseout=play;
+				
+				img[i].onclick=function(){
+					window.open("Home_page.html","_self");
+				}
+			}
+			
+			function play(){
+				
+					time=setInterval(function(){
+						onetop=onetop-1;
+						one.style.top=onetop+"px";
+						twotop=twotop-2;
+						two.style.top=twotop+"px";
+						threetop=threetop-3;
+						three.style.top=threetop+"px";
+						fourtop=fourtop-4;
+						four.style.top=fourtop+"px";
+						fivetop=fivetop-5;
+						five.style.top=fivetop+"px";
+						if(onetop<-1200){
+							clearInterval(time);
+							window.open("Home_page.html","_self");
+						}
+					},10);
+			}
+			play();
+		}
+		
+	</script>
+</html>

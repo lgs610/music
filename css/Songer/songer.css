@@ -1,0 +1,109 @@
+a:hover{
+	text-decoration: none;
+}
+a:focus{
+	text-decoration: none;
+}
+.songerKind{
+	width: 1200px;
+	margin: 20px auto;
+	background: #252525;
+	padding: 20px 0px;
+}
+	.songKind_div{line-height: 50px;}
+		.songKind_div span{background: #1697CB;color: white;padding: 5px 10px;margin: 0px 15px;}
+		.songKind_div a{margin: 20px;}
+	.songKind_hot{line-height: 50px;}
+		.songKind_hot span{background: #1697CB;color: white;padding: 5px 10px;margin: 0px 15px;}
+		.songKind_hot a{margin: 10px;}
+ 	.songKind_div_a:hover{color: white;}
+.songerImg{
+	width: 1200px;
+	padding: 50px 0px 0px 0px;
+	margin: 0 auto 50px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: center;
+	background: #252525;
+	}
+	.songerPart{
+		width: 240px;
+		height: 240px;
+		text-align: center;
+	}
+	.songerPart_img{
+		width: 150px;
+		height: 150px;
+		border-radius: 150px;	
+		margin: 0 auto;
+		overflow: hidden;
+	}
+		.songerPart_img:hover{
+			box-shadow:inset 0 0 0 1px #1697CB, 0 0 20px 3px #1697CB;
+		}
+		.songerPart img{
+			width: 150px;
+			border-radius: 150px;
+			transition: transform 0.3s;
+		}
+			.songerPart img:hover{transform: scale(1.1);}
+		
+		.songerPart_songername{width: 100%; margin: 25px auto 0px auto;}
+		.songerPart_songername a{height:20px;text-align: center; display: block; width:100%;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+
+/*种类选择*/
+.kind_choose{
+	width: 1200px;
+	margin: 0px auto;
+	height: 150px;
+	padding: 50px 0;
+}
+	.kind_choose button{width:50px; height:30px;font-size: 16px; float: right;background: #333333;border: 1px solid white;transition-property:background,color;transition-duration: 0.25s;}
+	.kind_choose button:hover{
+		background: white;
+		color: #1697CB;
+	}
+	.songMenuChoose{
+		font-size: 30px;
+		float: left;
+	}
+	
+
+
+.div_tbl{
+	width: 100%;
+	height: 900px;
+}
+.music_tbl{
+	width: 1200px;
+	margin: 0 auto;
+}
+	.music_tbl .music_tr{
+		width: 100%;
+		height: 50px;
+	}
+		.music_tbl .music_tr a{
+			display: block;
+			width: 100%;
+			color: white;
+			text-decoration: none;
+			transition: color 0.25s;
+			white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+		}
+			.music_tbl .music_tr a:hover{
+				color: #1697CB;
+			}
+	.music_check{
+		position: relative;
+		width: 100px;
+	}
+		.music_check input{
+			position: absolute;
+			top: 18px;
+			left: 10px;
+		}
+		.music_tbl td{
+			width: 20%;
+		}

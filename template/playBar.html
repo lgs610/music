@@ -1,0 +1,80 @@
+<div class="play-bar container">
+    <audio id="audio" preload="auto"></audio>
+    <div class="row play-bar-line">
+        <!-- 播放时间进度条-->
+        <div class="col-md-6 col-md-push-2 col-xs-12 col-sm-6 col-sm-push-3">
+            <div class="row play-time">
+                <div class="col-md-2 col-xs-2 col-sm-2 currentTime">0:00</div>
+                <div class="currentTimeBar col-md-8 col-xs-8 col-sm-8">
+                    <div class="currentTimeSlided"></div>
+                    <div class="currentTimeBlock">
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-2 col-sm-2 duration">0:00</div>
+            </div>
+        </div>
+        <!-- 播放开关按钮面板-->
+        <div class="col-md-2 col-md-pull-6 col-xs-6 col-sm-3 col-sm-pull-6">
+            <ul class="row btnGroup-1">
+                <li class="col-md-4 col-xs-4 col-sm-4 ">
+                    <button class="btn-last"><span class="glyphicon glyphicon-backward"></span></button>
+                </li>
+                <li class="col-md-4 col-xs-4 col-sm-4 ">
+                    <button  class="btn-play"><span class="glyphicon glyphicon-pause "></span></button>
+                </li>
+                <li class="col-md-4 col-xs-4 col-sm-4 ">
+                    <button class="btn-next"><span class="glyphicon glyphicon-forward"></span></button>
+                </li>
+            </ul>
+        </div>
+        <!-- 其他按钮面板-->
+        <div class="col-md-4 col-xs-6 col-sm-3 ">
+            <ul class="row btnGroup-2">
+                <li class="col-xs-6  col-sm-6 col-md-2 col-lg-2">
+                    <a class="btn-play-model" ng-click="changePlayModel()" title="{{playModelMessage[playModel-1]}}">{{playModelMessage[playModel-1]}}</a>
+                </li>
+                <li class="col-xs-3  col-sm-3 col-md-2 col-lg-2">
+                    <button class="btn-change" ng-click="changeView()"><span class="glyphicon glyphicon-comment"></span></button>
+                </li>
+                <li class="col-md-6 col-lg-6 visible-lg visible-md ">
+                    <button class="btnVolume col-md-2 col-lg-2 " ng-click="muted()"><span class="glyphicon glyphicon-volume-up"></span></button>
+                    <div class="col-md-10 col-lg-10">
+                        <div class="volumeBar">
+                            <div class="volumeSlided"></div>
+                            <div class="volumeBlock"></div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 播放列表按钮及播放列表-->
+                <li class="col-xs-3  col-sm-3 col-md-2 col-lg-2">
+                    <button class="btn-song-list" ng-click="showList()"><span class="glyphicon glyphicon-th-list"></span></button>
+                    <div class="song-list-container" ng-show="showListFlag">
+                        <div class="song-list-bar ">
+                            <ul class="row">
+                                <li class="col-md-4 col-lg-4
+                                col-xs-4 col-sm-4">总共{{source.songList.length}}首</li>
+                                <li class="col-md-2 col-lg-2 col-md-offset-4 col-lg-offset-4
+                                col-xs-4 col-sm-4 ">
+                                    <a>收藏全部</a>
+                                </li>
+                                <li class="col-md-2 col-lg-2 col-xs-4 col-sm-4">
+                                    <a ng-click="clearSongList()">清空全部</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="song-list-view">
+                            <table class="song-list">
+                                <tr>
+                                </tr>
+                                <tr ng-repeat="item in source.songList" ng-class="{playing:$index==source.playIndex}" ng-click="changeSong($index)">
+                                    <td class="">{{item.songName}}</td>
+                                    <td class="">{{item.singerName}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

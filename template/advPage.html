@@ -1,0 +1,30 @@
+<div class="adv-page">
+    <!-- 推荐页面标题-->
+    <div class="page-xs-tittle row visible-xs">
+        <div class="col-xs-2 logo">
+            <img src="./data/image/Logo.png" >
+        </div>
+        <h4 class="text-center col-xs-6 ">推荐的音乐</h4>
+    </div>
+    <!-- 推荐页顶部-->
+    <div class="adv-page-top row">
+        <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2
+        col-xs-12">
+            <img src="data/image/21.jpg">
+        </div>
+    </div>
+    <!-- 推荐页内容-->
+    <div class="adv-page-content row">
+        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 title-row">
+            <h3 class="visible-lg-inline visible-md-inline visible-sm-inline visible-xs-inline">歌单推荐</h3>
+            <a class="pull-right">更多</a>
+        </div>
+        <div ng-repeat="item in advSongMenuArr" class="col-xs-4 col-sm-3 col-md-2 col-lg-2 adv-content-item">
+            <div class="item-top">
+                <img ng-src="{{item.songMenuCoverUrl}}">
+                <a class="adv-item-btn" ng-click="showTip($event)"><span class="glyphicon glyphicon-play"></span></a>
+            </div>
+            <p ng-bind="item.songMenuName" class="text-center"></p>
+        </div>
+    </div>
+</div>

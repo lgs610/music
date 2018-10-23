@@ -1,0 +1,214 @@
+
+	
+
+.div_tbl{
+	width: 100%;
+	height: 550px;
+}
+.music_tbl{
+	width: 1200px;
+	margin: 0 auto;
+}
+	.music_th{
+		background: black;
+		height: 50px;
+	}
+		.music_th th{
+			text-align: center;
+		}
+	.music_tbl .music_tr{
+		height: 50px;
+	}
+		.music_tbl .music_tr a{
+			color: white;
+			text-decoration: none;
+		}
+			.music_tbl .music_tr a:hover{
+				text-decoration: underline;
+			}
+	.music_check{
+		position: relative;
+		width: 100px;
+	}
+		.music_check input{
+			position: absolute;
+			top: 18px;
+			left: 10px;
+		}
+		.music_tr:nth-child(2n){
+			background: #222222;
+		}
+			.music_tbl .music_tr:hover{
+				background: #1697CB;
+			}
+		.music_tbl td{
+			text-align: center;
+		}
+
+
+
+/*种类选择*/
+.kind_choose{
+	width: 1200px;
+	margin: 0px auto;
+	height: 150px;
+	padding: 50px 0;
+}
+	.kind_choose button{width:50px; height:30px;font-size: 16px; float: right;background: #333333;border: 1px solid white;transition-property:background,color;transition-duration: 0.25s;}
+	.kind_choose button:hover{
+		background: white;
+		color: #1697CB;
+	}
+	.songMenuChoose{
+		font-size: 30px;
+		float: left;
+	}
+	
+	.kind_choose_kind{
+		float: left;
+		margin: 0 5px;
+	}
+	.kind_choose_part{
+		height: 30px;
+		background: #1697CB;
+		line-height: 30px;
+		padding: 0px 5px;
+		font-size: 16px;
+	}
+		.delBtn{
+			cursor: pointer;
+			text-align: center;
+			line-height: 20px;
+			float: right;
+			width: 20px;
+			height: 20px;
+			border-radius: 20px;
+			margin: 5px 0px 0px 5px;
+			font-size: 14px;
+			background: rgba(0,0,0,0.3);
+			transition: transform 0.25s;
+		}
+		.delBtn:hover{
+			transform: rotate(180deg);
+		}
+		#songLanguage{display: none;}
+		#songGenre{display: none;}
+		#songTemme{display: none;}
+		#songMood{display: none;}	
+		#songScene{display: none;}
+	
+		
+/*分类*/
+._Kind{
+	width:1200px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 50px 0px;
+}
+	._kind_one{width: 200px;float: left;padding: 0px 20px;}
+	._kind_two{width: 249px;float: left;padding: 0px 20px; border-left:1px solid rgba(255,255,255,0.1);}
+		._kind_language{
+			color: #AAAAAA;
+			margin: 5px auto;
+		}
+		.kind_language{		
+			width: 100%;
+		}
+		.kind_one_div{width: 50%;float: left;}
+		.kind_two_div{width: 33%;float: left;}
+			.kind_language a{
+				color: white;
+				display: block;
+				margin: 5px auto;
+				text-decoration: none;
+			}
+				.kind_language a:hover{color: #1697CB;text-decoration: none;}
+				.kind_language a:focus{color: #1697CB;text-decoration: none;}
+			
+
+.Menu{
+	width: 1200px;
+	margin: 0 auto;
+}
+.Menu_row{
+	width: 100%;
+		display: -webkit-flex;
+			display: -ms-flexbox;
+				display: -moz-box;
+				display: flex;
+			flex-direction: row;
+    		flex-wrap: wrap;
+    		justify-content:flex-start;
+}
+
+	.Menu_part{
+		width: 200px;
+		margin: 0 20px;
+	}
+.Menu_part_a{
+	display: block;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+	.Menu_part_a:hover i{
+		opacity: 1;
+	}
+	.Menu_part_a:hover .Menu_part_icon{
+		transform: scale(1);
+	}
+	.Menu_part_a:hover img{
+		width: 100%;
+		height: 100%;
+		transform: scale(1.1);
+	}
+	.Menu_part_img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: transform 0.5s;
+	}
+	.Menu_part_a i{
+		transition-duration:0.5s ;
+		transition-property: opacity,transform;
+	}
+	.Menu_part_bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.3);
+		opacity: 0;
+	}
+	.Menu_part_icon{
+		position: absolute;
+		top: 65px;
+		left: 65px;
+		width: 70px;
+		height: 70px;
+		opacity: 0;
+		transform: scale(0.5);
+		background: url(../../img/Head/cover_play.png) repeat scroll top left;
+	}
+
+.Menu_part_mes{
+	width: 100%;
+	padding-top: 10px;
+}
+	.Menu_part_song{width: 100%;}
+	.Menu_part_mes a{text-decoration: none;color: white;}
+	.Menu_part_mes ul{
+		width: 100%;
+		padding: 0;
+		list-style: none;
+	}
+		.Menu_part_mes ul li{
+			width: 100%;
+			margin: 1px auto;
+		}
+			.Menu_part_song a{ font-size: 16px;display: block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+				.Menu_part_song a:hover{color: #1697CB;text-decoration: none;}
+				.Menu_part_song a:focus{color: #1697CB;text-decoration: none;}
+			.Menu_part_songer{ font-size: 14px;  color: #AAAAAA; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}

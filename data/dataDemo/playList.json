@@ -1,0 +1,6 @@
+//播放列表
+{
+  "playListId":"001",
+  "ownerId":"001",
+  "songListArr":["001","002"]
+}

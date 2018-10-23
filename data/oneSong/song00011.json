@@ -1,0 +1,15 @@
+{
+  "success":"true",
+  "package":{
+      "songId":"00011",
+      "songName":"Look In My Eyes",
+      "songSrc":"data/song/张曼玉 - Look In My Eyes.mp3",
+      "singerId":"001",
+      "albumId":"0011",
+      "commentListId":"00111",
+      "lyric":".....",
+      "singerName":"张曼玉",
+      "albumName":"Hello",
+      "albumCoverUrl":"img/home_carousel/All/All1.jpg"
+  }
+}

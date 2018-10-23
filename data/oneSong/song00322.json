@@ -1,0 +1,16 @@
+
+{
+  "success":"true",
+  "package":{
+      "songId":"00314",
+      "songName":"Stay Alive",
+      "songSrc":"data/song/高橋李依 - Stay Alive.mp3",
+      "singerId":"001",
+      "albumId":"0011",
+      "commentListId":"00111",
+      "lyric":".....",
+      "singerName":"高橋李依",
+      "albumName":"Hello",
+      "albumCoverUrl":"img/home_carousel/Japanese/Jp6.jpg"
+  }
+}

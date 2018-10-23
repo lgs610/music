@@ -1,0 +1,68 @@
+{
+  "success":"true",
+  "package":{
+    "songMenuId":"001",
+    "songMenuName":"创建1",
+    "createrId":"001",
+    "createrName":"jo",
+    "songMenuCoverUrl":"data/image/21.jpg",
+    "songMenuMessage":"this is my songMenu create in 2016.....",
+    "songMenuArr":[
+      {
+        "songId":"00111",
+        "songName":"Hello",
+        "songSrc":"data/song/Adele - Hello.mp3",
+        "singerId":"001",
+        "albumId":"0011",
+        "singerName":"Adele",
+        "albumName":"Hello"
+      },
+      {
+        "songId":"00121",
+        "songName":"Set Fire to the Rain",
+        "songSrc":"data/song/Adele - Set Fire to the Rain.mp3",
+        "singerId":"001",
+        "albumId":"0012",
+        "singerName":"Adele",
+        "albumName":"21"
+      },
+      {
+        "songId":"00131",
+        "songName":"Someone Like You",
+        "songSrc":"data/song/Adele - Someone Like You.mp3",
+        "singerId":"001",
+        "albumId":"0013",
+        "singerName":"Adele",
+        "albumName":"Someone Like you"
+      },
+      {
+        "songId":"00111",
+        "songName":"Hello",
+        "songSrc":"data/song/Adele - Hello.mp3",
+        "singerId":"001",
+        "albumId":"0011",
+        "singerName":"Adele",
+        "albumName":"Hello"
+      },
+      {
+        "songId":"00121",
+        "songName":"Set Fire to the Rain",
+        "songSrc":"data/song/Adele - Set Fire to the Rain.mp3",
+        "singerId":"001",
+        "albumId":"0012",
+        "singerName":"Adele",
+        "albumName":"21"
+      },
+      {
+        "songId":"00131",
+        "songName":"Someone Like You",
+        "songSrc":"data/song/Adele - Someone Like You.mp3",
+        "singerId":"001",
+        "albumId":"0013",
+        "singerName":"Adele",
+        "albumName":"Someone Like you"
+      }
+    ]
+
+  }
+}

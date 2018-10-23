@@ -1,0 +1,61 @@
+/*动画用..*/
+/*动画部分....*/
+.rotate{
+    animation: rotate 15s linear infinite;
+    animation-play-state:paused;
+}
+.rotateRun{
+    animation-play-state:running;
+}
+.shine{
+    animation: shine 1s linear infinite alternate;
+    color: rgba(27,151,203,1);
+}
+a.tipGet,button.tipGet{
+    transform: scale(1.2);
+    color:#0b97c4 ;
+}
+a.tipGet>span,button.tipGet>span{
+    color:#0b97c4 ;
+}
+.tipSetting,.tipSetting>span{
+    transition: color 0.5s,transform 0.5s;
+}
+.tipFlag{
+    position: fixed;
+    z-index: 999999;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 30px;
+    transition: transform 0.5s;
+    transform: scale(0);
+    opacity: 1;
+    color: white;
+}
+.max{
+    transform: scale(1);
+}
+.reduce{
+    transform:scale(0);
+    opacity: 0;
+    margin-bottom:0;
+
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }to{
+         transform: rotate(360deg);
+     }
+}
+@keyframes shine {
+    form {
+        opacity: 1;
+
+        transform: scale(1);
+    }to{
+         opacity: 0.5;
+         transform: scale(0.8);
+     }
+}

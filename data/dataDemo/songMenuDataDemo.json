@@ -1,0 +1,9 @@
+//歌单
+{
+  "songMenuId":"001",
+  "songMenuName":"xxxx",
+  "createrId":"001",
+  "songMenuArr":["001","002"],
+  "songMenuCoverUrl":".........",
+  "songMenuMessage":"this is my songMenu create in 2016....."
+}

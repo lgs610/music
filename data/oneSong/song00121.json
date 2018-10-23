@@ -1,0 +1,15 @@
+{
+  "success":"true",
+  "package":{
+    "songId":"00121",
+    "songName":"Set Fire to the Rain",
+    "songSrc":"data/song/Adele - Set Fire to the Rain.mp3",
+    "singerId":"001",
+    "albumId":"0012",
+    "commentListId":"00121",
+    "lyric":".....",
+    "singerName":"Adele",
+    "albumName":"21",
+    "albumCoverUrl":"data/image/21.jpg"
+  }
+}

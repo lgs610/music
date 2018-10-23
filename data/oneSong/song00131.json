@@ -1,0 +1,15 @@
+{
+  "success":"true",
+  "package":{
+    "songId":"00131",
+    "songName":"Someone Like You",
+    "songSrc":"data/song/Adele - Someone Like You.mp3",
+    "singerId":"001",
+    "albumId":"0013",
+    "commentListId":"00131",
+    "lyric":".....",
+    "singerName":"Adele",
+    "albumName":"Someone Like you",
+    "albumCoverUrl":"data/image/Someone Like You.jpg"
+  }
+}

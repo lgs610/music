@@ -1,0 +1,15 @@
+{
+  "success":"true",
+  "package":{
+      "songId":"00111",
+      "songName":"Hello",
+      "songSrc":"data/song/Adele - Hello.mp3",
+      "singerId":"001",
+      "albumId":"0011",
+      "commentListId":"00111",
+      "lyric":".....",
+      "singerName":"Adele",
+      "albumName":"Hello",
+      "albumCoverUrl":"data/image/Hello.jpg"
+  }
+}

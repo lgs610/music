@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/Home_page/home_piccarousel.css" />
+		<script type="text/javascript" src="jQuery/jquery-3.0.0.js" ></script>
+	</head>
+	<body>
+		<div class="J_Poster poster-main" data-setting='{
+				"width":1200,
+				"height":300,
+				"posterWidth":751,
+				"posterHeight":300,
+				"scale":0.8,
+				"speed":500,
+				"autoPlay":true,
+				"delay":1000,
+				"verticalAlign":"middle"
+		}'>
+			<div class="poster-btn poster-prev-btn">&lt;</div>
+			<ul class="poster-list">
+				<li class="poster-item"><a href="Home_page.html"><img src="img/home_piccarousel/49003.jpg" width="100%"/></a></li>
+				<li class="poster-item"><a href="Home_page.html"><img src="img/home_piccarousel/51207.jpg" width="100%"/></a></li>
+				<li class="poster-item"><a href="Home_page.html"><img src="img/home_piccarousel/51223.jpg" width="100%"/></a></li>
+				<li class="poster-item"><a href="Home_page.html"><img src="img/home_piccarousel/51413.jpg" width="100%"/></a></li>
+				<li class="poster-item"><a href="Home_page.html"><img src="img/home_piccarousel/51799.jpg" width="100%"/></a></li>
+			</ul>
+			<div class="poster-btn poster-next-btn">&gt;</div>
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="js/Home_page/home_page_piccarousel.js" ></script>
+	<script>
+		$(function(){
+			//Carousel
+			
+			//var carousel = new Carousel($(".J_Poster").eq(0));
+			//传入多个旋转木马
+			
+			//因为window设置了Carousel这个属性，所以可以在window下直接访问到
+			Carousel.init($(".J_Poster"));
+			
+		});
+	</script>
+	
+</html>

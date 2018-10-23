@@ -1,0 +1,38 @@
+.paging{
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+	.paging_ul{
+		list-style: none;
+		padding: 0;
+		margin: 50px auto 0px auto;
+		width: 648px;
+		height: 50px;
+	}
+		.paging_li{
+			width: 50px;
+			height: 50px;
+			background: #000000;
+			color: white;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+			float: left;
+			cursor: pointer;
+			font-family: "幼圆";
+			margin: 0px 2px;
+		}
+			.paging_ul .paging_li:hover{
+				background: #1697CB;
+			}
+	.paging_ipt{
+		width: 50px;
+		height: 48px;
+		border-top:1px solid #000000 ;
+		border-bottom:1px solid #000000 ;
+		border-left: none;
+		border-right:none;
+		color: #000000;
+		text-align: center;
+	}

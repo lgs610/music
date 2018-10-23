@@ -1,0 +1,110 @@
+
+<div class="play-home container" ng-controller="playHomeController" ng-show="!contentOpenFlag">
+    <div class="row">
+        <!-- 左边的 -->
+        <div class="play-home-left col-md-2 col-lg-2 col-sm-3 col-xs-12 hidden-xs">
+            <!-- 用户功能区域-->
+            <div class="play-home-left-top">
+                <h3 class="hidden-xs">发现</h3>
+                <ul class="hidden-xs">
+                    <li ng-click="itemActive(0,-1)" ng-class="{'item-open':-1==itemOpenIndex}">
+                        <a ng-href="#/adv">推荐的音乐</a>
+                    </li>
+                    <li ng-click="itemActive(0,-3)" ng-class="{'item-open':-3==itemOpenIndex}">
+                        <a ng-href="#/">朋友</a>
+                    </li>
+                </ul>
+                <h3 class="create-title" ng-click="toggleSongMenuList('create')">创建的歌单
+                    <button  class="btn-hide btn-toggle">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button></h3>
+                <ul class="song-menu-create">
+                    <li><button class="btn-create-menu btn-hide">创建新歌单
+                    <span class="glyphicon glyphicon-plus "></span></button></li>
+                    <li ng-repeat="item in songMenuCreate"
+                        ng-class="{'item-open':$index==itemOpenIndex-20}">
+                        <a ng-bind="item.songMenuName" ng-href="#/songMenu{{item.songMenuId}}"
+                           ng-click="itemActive(20,$index)"></a>
+                    </li>
+                </ul>
+                <h3 class="collect-title" ng-click="toggleSongMenuList('collect',this)">收藏的歌单
+                    <button  class="btn-hide btn-toggle">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button></h3>
+                <ul class="song-menu-collect">
+                    <li ng-repeat="item in songMenuCollect"
+                        ng-class="{'item-open':$index==itemOpenIndex-10}">
+                        <a ng-bind="item.songMenuName" ng-href="#/songMenu{{item.songMenuId}}"
+                           ng-click="itemActive(10,$index)"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 缩小窗口-->
+            <div ng-hide="source.songList.length==0" class="min-content hidden-xs">
+                <a class="btn-max-content text-over-point"
+                   ng-click="maxContent()">
+                    <img ng-src="{{source.songList[source.playIndex].albumCoverUrl}}"/>
+                    <span class="glyphicon glyphicon-resize-full"></span>
+                </a>
+                <h4 class="text-over-point">
+                    <a ng-click="maxContent()"
+                       ng-bind="source.songList[source.playIndex].songName">
+                </a></h4>
+                <h5 class="text-over-point"><a  ng-bind="source.songList[source.playIndex].albumName">
+                </a></h5>
+            </div>
+        </div>
+        <!-- xs尺寸的歌单管理部分-->
+        <div ng-show="xsPageFlag.songMenu" class="play-home-left-xs visible-xs col-xs-12">
+            <div class="page-xs-tittle row">
+                <div class="col-xs-2 logo">
+                    <img src="./data/image/Logo.png" >
+                </div>
+                <h4 class="text-center col-xs-4 ">我的音乐</h4>
+
+            </div>
+            <h5 class="create-title" ng-click="toggleSongMenuList('create')">创建的歌单
+                <button  class="btn-hide btn-toggle">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button></h5>
+            <ul class="song-menu-create">
+                <li><button class="btn-create-menu btn-hide">创建新歌单
+                    <span class="glyphicon glyphicon-plus "></span></button></li>
+                <li ng-repeat="item in songMenuCreate"
+                    ng-class="{'item-open':$index==itemOpenIndex-20}">
+                    <img ng-src="{{item.songMenuCoverUrl}}"/>
+                    <a ng-bind="item.songMenuName" ng-href="#/songMenu{{item.songMenuId}}"
+                       ng-click="itemActive(20,$index)"></a>
+                </li>
+            </ul>
+            <h5 class="collect-title" ng-click="toggleSongMenuList('collect',this)">收藏的歌单
+                <button  class="btn-hide btn-toggle">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button></h5>
+            <ul class="song-menu-collect">
+                <li ng-repeat="item in songMenuCollect"
+                    ng-class="{'item-open':$index==itemOpenIndex-10}">
+                    <img ng-src="{{item.songMenuCoverUrl}}"/>
+                    <a ng-bind="item.songMenuName" ng-href="#/songMenu{{item.songMenuId}}"
+                       ng-click="itemActive(10,$index)"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- xs尺寸广告部分-->
+        <div ng-show="xsPageFlag.adv&&xsFlag" class="play-home-adv-xs" >
+            <adv-page></adv-page>
+        </div>
+        <!-- xs user-->
+        <div ng-show="xsPageFlag.user&&xsFlag" class="play-home-user-xs">
+            <user-page></user-page>
+        </div>
+        <!-- 右边的-->
+        <div class="play-home-right col-md-10 col-lg-10 col-sm-9 col-xs-12" >
+            <div class="play-home-right-holder"  >
+                <div ui-view="">
+                    加载中......
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

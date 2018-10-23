@@ -1,0 +1,21 @@
+<div class="comment container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1 comment-left ">
+            <h3>听友评论</h3>
+            <div class="send-comment">
+                <input type="text" placeholder="发表评论" ng-click="commentDialog()">
+            </div>
+            <ul>
+                <li ng-repeat="commentItem in comment.commentList">
+                    <img ng-src="{{commentItem.userIconSrc}}">
+                    <a ng-href="" ng-bind="commentItem.userName"></a>
+                    <p ng-bind="commentItem.userComment" class="text-over-point"></p>
+                </li>
+            </ul>
+
+        </div>
+        <div class="comment-right col-md-3 col-md-offset-1  hidden-xs ">
+
+        </div>
+    </div>
+</div>

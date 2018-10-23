@@ -1,0 +1,7 @@
+//歌手
+{
+  "singerId":"001",
+  "singerName":"xxxx",
+  "albumArr":["001","002"],
+  "singerMessage":"xxxxxxxx"
+}

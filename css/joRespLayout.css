@@ -1,0 +1,95 @@
+/*响应式部分*/
+@media (max-width: 767px){
+    .play-bar{
+        height: 120px;
+    }
+    .content{
+        margin-bottom:120px;
+    }
+    .lp{
+        margin-top:10% ;
+    }
+}
+@media (min-width : 767px) and (max-width: 980px) and (min-height: 700px){
+    ul.btnGroup-3{
+        margin-top:-100px;
+    }
+    .content-right{
+        height: 50%;
+    }
+    .content-left{
+        height: 50%;
+    }
+    .lyric{
+        height: 95%;
+    }
+    .play-home-right-top{
+        height: 120px;
+    }
+    .play-home-right-bottom{
+        top:170px;
+    }
+
+    .play-home-right .song-menu-table td:nth-child(2):hover a{
+        width: 40%;
+    }
+    .play-home-right .song-menu-table td:nth-child(2):hover .song-opera{
+        width: 60%;
+    }
+    .play-home-tittle .header-logo img{
+        margin-right:15%;
+    }
+    .adv-page-top{
+        height: 30%;
+    }
+}
+@media (max-width: 500px)  {
+    .content-right{
+        height: 100%;
+    }
+    .content-left{
+        height: 50%;
+    }
+    .lyric{
+        height: 80%;
+        top:10%;
+        position: relative;
+    }
+    .play-home-right-top{
+        height: 60px;
+    }
+    .play-home-right-bottom{
+        top:110px;
+    }
+
+    .play-home-right .song-menu-table td:nth-child(2):hover a{
+        width: 40%;
+    }
+    .play-home-right .song-menu-table td:nth-child(2):hover .song-opera{
+        width: 60%;
+    }
+    .play-home-right{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 100%;
+        background: black;
+        z-index: 400;
+
+    }
+    .play-home-left-top{
+        bottom: 0;
+    }
+    .play-home{
+        top:0;
+    }
+    .page-xs-tittle+*{
+        margin-top: 60px;
+    }
+    .adv-page .page-xs-tittle+*{
+        margin-top: 40px;
+    }
+    .adv-page-top{
+        height: 150px;
+    }
+}

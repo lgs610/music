@@ -1,0 +1,51 @@
+<div class="play-home-right-top">
+    <a ng-click="xsSongMenuHide()" class="btn-xs-back-play-home visible-xs"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <img ng-src="{{songMenuData.songMenuCoverUrl}}" class="song-menu-cover"
+            />
+    <div class="song-menu-message">
+        <h2 ng-bind="songMenuData.songMenuName" class="text-over-point visible-lg visible-md"></h2>
+        <h4 ng-bind="songMenuData.songMenuName" class="text-over-point visible-xs visible-sm"></h4>
+        <p ng-bind="songMenuData.songMenuMessage" class="text-over-point visible-lg visible-md"></p>
+        <ul class="song-menu-opera">
+            <li><a href="" ng-click="instantPlayAll(songMenuData.songMenuId,$event)">播放全部</a>
+                <a href="" ng-click="addAllToList(songMenuData.songMenuId,$event)"><span class="glyphicon glyphicon-plus">
+
+                </span></a></li>
+            <li><a href="">收藏</a></li>
+        </ul>
+    </div>
+</div>
+<ul class="song-menu-tittle row">
+    <li class="col-md-1 col-lg-1 col-sm-1  col-xs-2  text-center">
+    </li>
+    <li class="col-md-5 col-lg-5 col-sm-5 col-xs-9 ">
+        <b>音乐标题</b>
+    </li>
+    <li  class="col-md-3 col-lg-3 col-sm-3 hidden-xs "><b>歌手</b></li>
+    <li  class="col-md-3 col-lg-3 col-sm-3 hidden-xs "><b>专辑</b></li>
+</ul>
+<div class="play-home-right-bottom">
+    <table class="song-menu-table">
+        <tr ng-repeat="item in songMenuArr" class="row">
+            <td class="col-md-1 col-lg-1 col-sm-1 col-xs-2 text-center"><b ng-bind="$index+1"></b></td>
+            <td class="col-md-5 col-lg-5 col-sm-5 col-xs-9"><a ng-bind="item.songName" class="text-over-point"></a>
+                <ul class="song-opera ">
+                    <li class="col-md-3 col-lg-3 col-xs-3 col-sm-3"><a ng-click="instantPlay($index,$event)">
+                        <span class="glyphicon glyphicon-play"></span>
+                    </a></li>
+                    <li class="col-md-3 col-lg-3 col-xs-3 col-sm-3"><a ng-click="addToList($index,$event)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a></li>
+                    <li class="col-md-3 col-lg-3 col-xs-3 col-sm-3"><a>
+                        <span class="glyphicon glyphicon-folder-close"></span>
+                    </a></li>
+                    <li class="col-md-3 col-lg-3 col-xs-3 col-sm-3"><a>
+                        <span class="glyphicon glyphicon glyphicon-share-alt"></span>
+                    </a></li>
+                </ul>
+            </td>
+            <td class="col-md-3 col-lg-3 col-sm-3 hidden-xs text-over-point" ng-bind="item.singerName"></td>
+            <td class="col-md-3 col-lg-3 col-sm-3 hidden-xs text-over-point" ng-bind="item.albumName"></td>
+        </tr>
+    </table>
+</div>

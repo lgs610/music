@@ -1,0 +1,22 @@
+{
+  "success":"true",
+  "package":{
+      "userId":"001",
+      "userName":"jo",
+      "userIconSrc":"",
+      "songMenuCreate":[
+        {"songMenuId":"001","songMenuName":"创建1","songMenuCoverUrl":"data/image/21.jpg"},
+        {"songMenuId":"002","songMenuName":"创建2","songMenuCoverUrl":"data/image/Hello.jpg"},
+        {"songMenuId":"003","songMenuName":"创建3","songMenuCoverUrl":"data/image/The Definitive Collection.jpg"}
+      ],
+      "songMenuCollect":[
+        {"songMenuId":"004","songMenuName":"收藏1","songMenuCoverUrl":"data/image/Someone Like You.jpg"},
+        {"songMenuId":"005","songMenuName":"收藏2","songMenuCoverUrl":"data/image/Got It.jpg"},
+        {"songMenuId":"006","songMenuName":"收藏3","songMenuCoverUrl":"data/image/危险世界.jpg"},
+        {"songMenuId":"005","songMenuName":"收藏2","songMenuCoverUrl":"data/image/Got It.jpg"},
+        {"songMenuId":"006","songMenuName":"收藏3","songMenuCoverUrl":"data/image/危险世界.jpg"},
+        {"songMenuId":"005","songMenuName":"收藏2","songMenuCoverUrl":"data/image/Got It.jpg"},
+        {"songMenuId":"006","songMenuName":"收藏3","songMenuCoverUrl":"data/image/危险世界.jpg"}
+      ]
+  }
+}

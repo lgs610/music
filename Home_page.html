@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html ng-app="CarouselApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"  content="width=device-width,initial-scale=1,maximum-scale=1">
+		<title>Slow Music</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/Home.css" />
+		<link rel="stylesheet" type="text/css" href="css/Home_page/home_page.css"/>
+		<script type="text/javascript" src="jQuery/jquery-3.0.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/angular-route.min.js" ></script>
+		<style type="text/css">
+			html{
+				font-size: 12px;	
+			}
+			body{
+				background: #333333;
+				margin: 0;
+				padding: 0;
+				color: white;
+				font-family: "微软雅黑";
+			}
+			@font-face {
+				font-family:manbow;
+				src: url("font/manbow clear.ttf");
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	描述：页头
+        -->
+		<div class="head">
+			<div class="head_top">
+				<div class="head_top_logo">
+					<img src="img/Head/Logo.png">
+					<span>Slow Music</span>
+				</div>
+				<ul class="head_ul">
+					<li>Music Library</li>
+					<li>My Music</li>
+				</ul>
+				<div class="head_find">
+					<input type="text" id="home_find_input">
+					<span class="glyphicon glyphicon-search"></span>
+				</div>
+				<div class="head_login">
+					<a href="#">Login</a>&nbsp;|&nbsp;<a href="#">Register</a>
+				</div>
+			</div>
+			<div class="nav_div">
+				<a href="javascript:void(0)" style="color: #1697CB;">Home</a>
+				<a href="songer.html">Songer</a>
+				<a href="Song_Menu.html">Song Menu</a>
+				<a href="Special.html">Special</a>
+				<a href="Rank.html">Rank</a>
+				<a href="MV.html">MV</a>
+			</div>
+		</div>
+		
+		
+		
+		<div class="nav">
+			<!--
+        		描述：轮播图
+       		 -->
+      	  	<div class="home_carousel">
+      	  		<div class="home_carousel_top">
+      	  			<div class="home_carousel_newsong">新歌首发</div>
+      	  			<ul>
+						<li><a href="#/">ALL</a></li>
+						<li><a href="#/template/tpls_home/home_China.html">China</a></li>
+						<li><a href="#/template/tpls_home/home_E&A.html">E&A</a></li>
+						<li><a href="#/template/tpls_home/home_Japanese.html">Japanese</a></li>
+						<li><a href="#/template/tpls_home/home_Korea.html">Korea</a></li>
+						<li><a href="horse.html">Other</a></li>
+      	  			</ul>
+      	  			<div id="container" class="All_carousel" ng-view>
+      	  			
+      	  				
+      	  			</div>
+      	  			
+      	  			<div class="carousel_index" id="buttonsall">
+      	  					<div class="carousel_buttons" id="buttons">
+      	  						<span id="buttons1" index="1" class="on"></span>
+								<span id="buttons2" index="2"></span>
+								<span id="buttons3" index="3"></span>
+      	  					</div>
+      	  			</div>
+      	  		</div>
+       		</div>
+		</div>
+
+		
+        <div id="home_carousel_bg" class="home_carousel_bg">
+        	
+        	<div class="home_carousel_left">
+        		<div id="prev" class="arrow">&lt;</div>
+        	</div>
+        	<div class="home_carousel_right">
+        		<div id="next" class="arrow">&gt;</div>
+        	</div>
+        </div>
+        
+        
+        <!--
+        	描述：旋转木马
+        -->
+        <div>
+        	<h1 class="Recommended">精彩推荐</h1>
+        </div>
+        <div class="Home_piccarousel">
+        	<div class="J_Poster poster-main" data-setting='{
+				"width":1200,
+				"height":300,
+				"posterWidth":751,
+				"posterHeight":300,
+				"scale":0.8,
+				"speed":500,
+				"autoPlay":false,
+				"delay":3000,
+				"verticalAlign":"middle"
+			}'>
+			<div class="poster-btn poster-prev-btn">&lt;</div>
+			<ul class="poster-list" ng-controller="PicCarousel">
+				<li class="poster-item" ng-repeat="x in Data"><a href={{x.imgUrl}}><img src={{x.picImgUrl}} width="100%"/></a></li>
+			</ul>
+			<div class="poster-btn poster-next-btn">&gt;</div>
+			</div>
+		</div>
+		
+		<!--
+        	描述：排行榜
+        -->	
+		<div class="rook_plane" ng-controller="Rook">
+			<div class="rook_bg rook_blur"></div>
+			<div class="rook_content">
+				<div class="rook_content_plane">
+					<div>
+        				<h1 class="Recommended">排行榜</h1>
+        			</div>
+        			<div class="rook">
+        				<div class="rk rook1">
+        					<div class="rook_title">流行指数</div>
+        					<ul class="rook_ul">
+        						<li class="rook_li" ng-repeat="x in rook1">
+        							<div class="li_song">
+        								<div class="li_num">{{$index+1}}</div>
+        								<div class="li_div_song"><a href={{x.songurl}}>{{x.Rooksong}}</a></div>
+        							</div>
+        							<div class="li_songer">{{x.rooksonger}}</div>	
+        						</li> 
+        					</ul>
+        				</div>
+        				<div class="rk rook2">
+        					<div class="rook_title">欧美</div>
+        					<ul class="rook_ul">
+        						<li class="rook_li" ng-repeat="x in rook2">
+        							<div class="li_song">
+        								<div class="li_num">{{$index+1}}</div>
+        								<div class="li_div_song"><a href={{x.songurl}}>{{x.Rooksong}}</a></div>
+        							</div>
+        							<div class="li_songer">{{x.rooksonger}}</div>	
+        						</li> 
+        					</ul>
+        				</div>
+        				<div class="rk rook3">
+        					<div class="rook_title">热歌</div>
+        					<ul class="rook_ul">
+        						<li class="rook_li" ng-repeat="x in rook3">
+        							<div class="li_song">
+        								<div class="li_num">{{$index+1}}</div>
+        								<div class="li_div_song"><a href={{x.songurl}}>{{x.Rooksong}}</a></div>
+        							</div>
+        							<div class="li_songer">{{x.rooksonger}}</div>	
+        						</li> 
+        					</ul>
+        				</div>
+        				<div class="rk rook4">
+        					<div class="rook_title">新歌</div>
+        					<ul class="rook_ul">
+        						<li class="rook_li" ng-repeat="x in rook4">
+        							<div class="li_song">
+        								<div class="li_num">{{$index+1}}</div>
+        								<div class="li_div_song"><a href={{x.songurl}}>{{x.Rooksong}}</a></div>
+        							</div>
+        							<div class="li_songer">{{x.rooksonger}}</div>	
+        						</li> 
+        					</ul>
+        				</div>
+        			</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--
+        	描述：歌单广场
+        -->
+        <div class="songMenu" ng-controller="songMenu">
+        	<div>
+        		<h1 class="Recommended">热门歌单</h1>
+        	</div>
+        	<div class="songMenuContent">
+        		<div id="songPrev" class="songMenu_prev arrow">&lt;</div>
+        		<div id="songMenu_container" class="songMenu_carousel">
+      		
+        			<div class="songMenuCarousel" id="songMenu_list" style="left: -1200px;">
+      	  				<div  class="carousel">
+      	  					<div class="carousel_part" ng-repeat="x in carousels3">
+      	  						<div class="carousel_part_img"><img ng-src={{x.src}} /></div>
+      	  						<div class="songcarousel_part_div">
+      	  							<span class="carousel_part_span1">{{x.span1}}</span>
+      	  							<span class="carousel_part_span2">{{x.span2}}</span>
+      	  						</div>
+      	  					</div>
+      	  				</div>
+      	  				<div  class="carousel">
+      	  					<div class="carousel_part" ng-repeat="x in carousels1">
+      	  						<div ng-click="allimg1($index)" class="carousel_part_img"><img ng-src={{x.src}} /></div>
+      	  						<div ng-click="allimg1($index)" class="songcarousel_part_div">
+      	  							<span class="carousel_part_span1">{{x.span1}}</span>
+      	  							<span class="carousel_part_span2">{{x.span2}}</span>
+      	  						</div>
+      	  					</div>
+      	  				</div>
+      	  				<div  class="carousel">
+      	  					<div class="carousel_part" ng-repeat="x in carousels2">
+      	  						<div ng-click="allimg2($index)" class="carousel_part_img"><img ng-src={{x.src}} /></div>
+      	  						<div ng-click="allimg2($index)" class="songcarousel_part_div">
+      	  							<span class="carousel_part_span1">{{x.span1}}</span>
+      	  							<span class="carousel_part_span2">{{x.span2}}</span>
+      	  						</div>
+      	  					</div>
+      	  				</div>
+      	  				<div  class="carousel">
+      	  					<div class="carousel_part" ng-repeat="x in carousels3">
+      	  						<div ng-click="allimg3($index)" class="carousel_part_img"><img ng-src={{x.src}} /></div>
+      	  						<div ng-click="allimg3($index)" class="songcarousel_part_div">
+      	  							<span class="carousel_part_span1">{{x.span1}}</span>
+      	  							<span class="carousel_part_span2">{{x.span2}}</span>
+      	  						</div>
+      	  					</div>
+      	  				</div>
+      	  				<div  class="carousel">
+      	  					<div class="carousel_part" ng-repeat="x in carousels1">
+      	  						<div class="carousel_part_img"><img ng-src={{x.src}} /></div>
+      	  						<div class="songcarousel_part_div">
+      	  							<span class="carousel_part_span1">{{x.span1}}</span>
+      	  							<span class="carousel_part_span2">{{x.span2}}</span>
+      	  						</div>
+      	  					</div>
+      	  				</div>
+      	  			</div>
+        			
+       			</div>
+        		<div id="songNext" class="songMenu_next arrow">&gt;</div>
+        		<div class="carousel_buttons songMenuBtn" id="songbuttons">
+      	  			<span id="songbuttons1" index="1" class="songon"></span>
+					<span id="songbuttons2" index="2"></span>
+					<span id="songbuttons3" index="3"></span>
+      	  		</div>
+        	</div>
+        </div>
+	
+		<!--
+        	描述：MV
+        -->
+       	<div class="MV" ng-controller="mv">
+       		<div>
+        		<h1 class="Recommended">MV首播</h1>
+        	</div>
+        	<div class="MV_Kind">
+				<a href="javascript:void(0)" ng-click="MVAll()">全部</a>
+				<a href="javascript:void(0)" ng-click="MVCN()">内地</a>
+				<a href="javascript:void(0)" ng-click="MVHT()">港台</a>
+				<a href="javascript:void(0)" ng-click="MVEA()">欧美</a>
+				<a href="javascript:void(0)" ng-click="MVJP()">日本</a>
+				<a class="MV_all" href="horse.html" style="font-size: 14px;">全部&gt;</a>
+        	</div>
+        	
+        	<div class="MV_content">
+        		<div class="MV_content_All">
+        			
+        				<div class="mv_part" ng-repeat="x in mvData">
+        					<a href={{x.MVa}} class="mv_a">
+       							<img class="mv_img" src={{x.MVurl}} width="300px"/>
+       							<i class="mv_bg"></i>
+       							<i class="mv_icon"></i>
+       						</a>
+       						<div class="mv_mes">
+       							<ul>
+       								<li class="mv_song"><a href={{x.songhref}}>{{x.MVsong}}</a></li>
+       								<li class="mv_songer"><a href={{x.songerhref}}>{{x.MVsonger}}</a></li>
+       								<li><span class="glyphicon glyphicon-facetime-video"></span><span class="mv_num">{{x.MVplaynumber}}</span></li>
+       							</ul>
+       						</div>
+        				</div>
+       					
+        		</div>
+        		<div class="MV_content_CN"></div>
+        		<div class="MV_content_HT"></div>
+        		<div class="MV_content_EA"></div>
+        		<div class="MV_content_JP"></div>
+        		
+        	</div>
+       	</div>
+       	
+       	<!--
+           	描述：页尾
+        -->
+        <div class="Home_End">
+        	<div class="Home_End_content">
+				<div class="Introduce">
+					<dl style="height: 150px;">
+						<dt><a href="#">下载客户端</a></dt>
+						<dd>
+							<a href="#">PC版</a>
+						</dd>
+						<dd>
+							<a href="#">Mac版</a>
+						</dd>
+						<dd>
+							<a href="#">Android版</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">IPhone版</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">特色产品</a></dt>
+						<dd>
+							<a href="#">K歌</a>
+						</dd>
+						<dd>
+							<a href="#">Super Sound</a>
+						</dd>
+						<dd>
+							<a href="#">QPlay</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">演出</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">合作</a></dt>
+						<dd>
+							<a href="#">CJ E&M</a>
+						</dd>
+						<dd style="margin-bottom: 74px;">
+							<a href="#">腾讯视频</a>
+						</dd>
+					</dl>
+					<dl style="height: 150px;">
+						<dt><a href="#">链接</a></dt>
+						<dd>
+							<a href="#">新浪微博</a>
+						</dd>
+						<dd>
+							<a href="#">腾讯微博</a>
+						</dd>
+						<dd style="margin-bottom: 30px;">
+							<a href="#">FackBook</a>
+						</dd>
+					</dl>
+					<dl style="margin-left: 25%;">
+						<dt><a href="#">我的音乐</a></dt>
+						<dd>
+							<a href="#">现有音乐</a>
+						</dd>
+						<dd>
+							<a href="#">查看音乐</a>
+						</dd>
+						<dd>
+							<a href="#">我的记忆</a>
+						</dd>
+						<dd>
+							<a href="#">账户设置</a>
+						</dd>
+						<dd>
+							<a href="#">音乐库</a>
+						</dd>
+						<dd>
+							<a href="#">我的优惠券</a>
+						</dd>
+						<dd>
+							<a href="#">我的收藏</a>
+						</dd>
+						<dd>
+							<a href="#">我的评论</a>
+						</dd>
+					</dl>
+					<dl style="margin-right: 25%;">
+						<dt><a href="#">帮助和搜索指南</a></dt>
+						<dd>
+							<a href="#">账户</a>
+						</dd>
+						<dd>
+							<a href="#">歌手</a>
+						</dd>
+						<dd>
+							<a href="#">歌单</a>
+						</dd>
+						<dd>
+							<a href="#">专辑</a>
+						</dd>
+						<dd>
+							<a href="#">单曲</a>
+						</dd>
+						<dd>
+							<a href="#">MV</a>
+						</dd>
+						<dd>
+							<a href="#">联系我们</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="End">
+				<ul>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+					<li>
+						<a href="#">帮助和购物指南</a>
+					</li>
+					<li>
+						<a href="#">法律声明</a>
+					</li>
+					<li>
+						<a href="#">使用原则</a>
+					</li>
+				</ul>
+				<div>
+				</div>
+				<span>
+					SlowMusic（中国）有限公司 保留所有权利    湘ICP备******号-2
+				</span>
+			</div>
+        </div>
+	</body>
+	
+	<script type="text/javascript" src="js/Home_page/ng-home_page_carousel.js" ></script>
+	<script type="text/javascript" src="js/Home_page/home_page_piccarousel.js" ></script>
+	<script>
+		$(function(){
+			//Carousel
+			
+			//var carousel = new Carousel($(".J_Poster").eq(0));
+			//传入多个旋转木马
+			
+			//因为window设置了Carousel这个属性，所以可以在window下直接访问到
+			setTimeout(function(){
+				Carousel.init($(".J_Poster"));
+			},1000);
+		});
+	</script>
+</html>

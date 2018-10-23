@@ -1,0 +1,179 @@
+{
+  "success":true,
+  "package":{
+    "albumId":"005",
+    "albumName":"R U Still Down_ [Remember Me]",
+    "singerId":"005",
+    "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg",
+    "songArr":[
+      {
+        "songId":"00511",
+        "songName":"I'm Losin It",
+        "songSrc":"data/song/Tupac - I'm Losin It.mp3",
+        "singerId":"005",
+        "albumId":"005",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00512",
+        "songName":"Let Them Thangs Go",
+        "songSrc":"data/song/Tupac - Let Them Thangs Go.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00513",
+        "songName":"Lie To Kick It",
+        "songSrc":"data/song/Tupac - Lie To Kick It.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00514",
+        "songName":"Nothin But Love",
+        "songSrc":"data/song/Tupac - Nothin But Love.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00515",
+        "songName":"Nothing To Lose",
+        "songSrc":"data/song/Tupac - Nothing To Lose.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00516",
+        "songName":"Only Fear Of Death",
+        "songSrc":"data/song/Tupac - Only Fear Of Death.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00517",
+        "songName":"Open Fire",
+        "songSrc":"data/song/Tupac - Open Fire.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00518",
+        "songName":"R U Still Down£¿ (Remember Me)",
+        "songSrc":"data/song/Tupac - R U Still Down£¿ (Remember Me).mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"00519",
+        "songName":"Ready 4 Whatever",
+        "songSrc":"data/song/Tupac - Ready 4 Whatever.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"005110",
+        "songName":"Redemption",
+        "songSrc":"data/song/Tupac - Redemption.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"005111",
+        "songName":"Thug Style",
+        "songSrc":"data/song/Tupac - Thug Style.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"005112",
+        "songName":"When I Get Free II",
+        "songSrc":"data/song/Tupac - When I Get Free II.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"005113",
+        "songName":"When I Get Free",
+        "songSrc":"data/song/Tupac - When I Get Free.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      },
+      {
+        "songId":"005114",
+        "songName":"Where Do We Go From Here (Interlude) - intro",
+        "songSrc":"data/song/Tupac - Where Do We Go From Here (Interlude) - intro.mp3",
+        "singerId":"005",
+        "albumId":"0013",
+        "commentListId":"00131",
+        "lyric":".....",
+        "singerName":"Tupac",
+        "albumName":"R U Still Down_ [Remember Me].jpg",
+        "albumCoverUrl":"data/image/R U Still Down_ [Remember Me].jpg"
+      }
+    ]
+  }
+}

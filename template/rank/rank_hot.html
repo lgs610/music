@@ -1,0 +1,36 @@
+<div class="Rank_right_title">
+						<span class="Rank_right_titlename">音乐榜·热歌</span>
+						<span class="Rank_right_titletime">2016-11-20</span>
+						<span class="Rank_right_titlerule">榜单规则</span>
+					</div>
+					<div class="Rank_right_Btn">
+						<button><span class="glyphicon glyphicon-play"></span>&nbsp;播放全部</button>
+						<button><span class="glyphicon glyphicon-plus"></span>&nbsp;添加到</button>
+						<button><span class="glyphicon glyphicon-save"></span>&nbsp;下载</button>
+						<button><span class="glyphicon glyphicon-sort-by-attributes"></span>&nbsp;批量操作</button>
+					</div>
+					<div class="div_tbl">
+						<table class="music_tbl">
+							<tr class="music_th">
+								<th style="width: 120px;"></th>
+								<th style="text-align: left;">歌曲</th>
+								<th>歌手</th>
+								<th>时长</th>
+							</tr>
+							<tr class="music_tr" ng-repeat="x in onePageData">
+								<td class="music_check">{{x.songRank}}</td>
+								<td style="text-align: left;"><a href="horse.html"><img src={{x.songImg}} width="50px"/></a><a href="Song_Menu.html" style="margin-left: 30px;">{{x.songName}}</a></td> 
+								<td><a href="songer.html">{{x.songer}}</a></td>
+								<td style="color: #CCCCCC;">{{x.songerTime}}</td>
+							</tr>
+						</table>
+					</div>
+<ul class="paging_ul">
+				<li class="paging_li" ng-click="page_Frist()">首</li>
+				<li class="paging_li" ng-click="pageprev()">&lt;</li>
+				<li class="paging_li paging_Btn" ng-repeat="(key,value) in pageCountArr track by key" ng-click="pageBtn($event)" ng-mouseover="pageBtnOver($event)" ng-mouseleave="pageBtnLeave($event)" data-index={{$index}}>{{pageCountArr[$index]}}</li>
+				<li class="paging_li" ng-click="pagenext()">&gt;</li>
+				<li class="paging_li" ng-click="page_End()">尾</li>
+				<li class="paging_li"><input class="paging_ipt" type="text" maxlength="3"/></li>
+				<li class="paging_li" ng-click="pageGo()">GO</li>
+			</ul>
